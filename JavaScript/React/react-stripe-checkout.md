@@ -16,6 +16,7 @@ with TS, I got this error
   
 ```
 
+error
 ```
 No overload matches this call.
   Overload 1 of 2, '(props: Readonly<StripeCheckoutProps>): StripeCheckout', gave the following error.
