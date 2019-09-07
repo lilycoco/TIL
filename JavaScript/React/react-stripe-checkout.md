@@ -1,5 +1,3 @@
-2019/9/7  
-
 ## react-stripe-checkout
 https://github.com/azmenak/react-stripe-checkout
 
