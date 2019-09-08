@@ -1,3 +1,6 @@
+This summary is based on
+http://www.elder-flower.com/underscore_js.html
+
 ## _.map()
 
 ```
