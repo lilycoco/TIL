@@ -1,5 +1,6 @@
-This summary is based on
-http://www.elder-flower.com/underscore_js.html
+This summary is based on  
+EN: https://underscorejs.org/
+JP: http://www.elder-flower.com/underscore_js.html
 
 ## _.map()
 
