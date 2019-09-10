@@ -1,4 +1,4 @@
-## react-stripe-checkout
+# react-stripe-checkout
 https://github.com/azmenak/react-stripe-checkout
 
 with TS, I got this error
