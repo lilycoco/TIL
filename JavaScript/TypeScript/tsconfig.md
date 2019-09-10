@@ -1,4 +1,6 @@
 # tsconfig
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
-### sample of tsconfig
+
+### OSS of tsconfig
 https://github.com/sindresorhus/tsconfig
