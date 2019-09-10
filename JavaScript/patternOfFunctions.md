@@ -58,6 +58,9 @@ console.log(counter.getCount())
 console.log(counter2.getCount())
 ```
 
+## Order rule
+*functions are not care about the call order but arro function should be called after it declared*
+
 ```
 function createEggFry() {
   const egg = getEgg()
@@ -67,6 +70,18 @@ function createEggFry() {
 
 function getEgg() {
 ...
+}
+```
+
+```
+const getEgg = () => {
+...
+}
+
+function createEggFry() {
+  const egg = getEgg()
+
+  return fry(egg)
 }
 
 ```
