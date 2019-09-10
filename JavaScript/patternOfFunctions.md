@@ -59,7 +59,7 @@ console.log(counter2.getCount())
 ```
 
 ## Order rule
-*functions are not care about the call order but arro function should be called after it declared*
+*functions are not care about the call order but arrow function should be called after it is declared*
 
 ```
 function createEggFry() {
