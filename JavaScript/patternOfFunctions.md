@@ -22,7 +22,8 @@ counter.plus()
 counter.getCount()
 ```
 
-## Prototype
+## Prototype / Class
+*`new` is required to declare it*
 ```
 function Counter() {
   this.count = 0
