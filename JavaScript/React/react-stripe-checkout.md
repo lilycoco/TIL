@@ -10,11 +10,11 @@ with TS, I got this error
     amount={500}
     token={(token) => handleToken(token)}
     stripeKey={process.env['REACT_APP_STRIPE_KEY']}
+    ^^^^^^^^^
   >
   
 ```
 
-error
 ```
 No overload matches this call.
   Overload 1 of 2, '(props: Readonly<StripeCheckoutProps>): StripeCheckout', gave the following error.
