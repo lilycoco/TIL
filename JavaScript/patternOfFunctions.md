@@ -1,5 +1,8 @@
 # Pattern of Functions
 
+### Javascript Classes v. Closures
+https://medium.com/engineering-livestream/javascript-classes-vs-closures-cf6d6c1473f
+
 ## Closure
 
 ```
