@@ -16,13 +16,13 @@ with TS, I got this error
 ```
 
 ```
-No overload matches this call.
-  Overload 1 of 2, '(props: Readonly<StripeCheckoutProps>): StripeCheckout', gave the following error.
-    Type 'string | undefined' is not assignable to type 'string'.
-      Type 'undefined' is not assignable to type 'string'.
-  Overload 2 of 2, '(props: StripeCheckoutProps, context?: any): StripeCheckout', gave the following error.
-    Type 'string | undefined' is not assignable to type 'string'.
-      Type 'undefined' is not assignable to type 'string'.ts(2769)
+      No overload matches this call.
+        Overload 1 of 2, '(props: Readonly<StripeCheckoutProps>): StripeCheckout', gave the following error.
+          Type 'string | undefined' is not assignable to type 'string'.
+            Type 'undefined' is not assignable to type 'string'.
+        Overload 2 of 2, '(props: StripeCheckoutProps, context?: any): StripeCheckout', gave the following error.
+          Type 'string | undefined' is not assignable to type 'string'.
+            Type 'undefined' is not assignable to type 'string'.ts(2769)
 ```
 
 
