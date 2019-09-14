@@ -1,5 +1,7 @@
 # Laravel
 
+[Laravel5.4でマルチ認証（userとadmin）を実装する方法](https://takahashi-it.com/php/laravel54-multi-auth/)
+
 **コントローラー作成**
 
 `php artisan make:controller コントローラ名`
