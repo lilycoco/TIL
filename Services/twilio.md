@@ -8,8 +8,8 @@ https://qiita.com/mobilebiz/items/4490fe5a03c5192ce06f
 https://twilio.kddi-web.com/phone-number_regulatory/
 
 ## 匿名に特化したProxy
-・https://qiita.com/ManabuMiwa/items/1e17a4d428f477ef1c3b
-・https://twilio.kddi-web.com/dev/691/
+https://qiita.com/ManabuMiwa/items/1e17a4d428f477ef1c3b  
+https://twilio.kddi-web.com/dev/691/
 
 ## 複数の電話番号に電話をかける。
 https://qiita.com/joohounsong/items/36da4e67b1652c60bf57
