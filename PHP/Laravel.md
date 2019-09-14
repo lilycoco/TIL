@@ -1,6 +1,6 @@
 # Laravel
 
-### **コントローラー作成**
+**コントローラー作成**
 
 `php artisan make:controller コントローラ名`
 
