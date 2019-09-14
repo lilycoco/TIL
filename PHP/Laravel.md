@@ -4,18 +4,18 @@
 
 `php artisan make:controller コントローラ名`
 
-### **マイグレーション**
+**マイグレーション**
 
 `php artisan migrate:refresh --seed`
 
-### **スケージュールラン**
+**スケージュールラン**
 
 `php artisan schedule:run`
 
-### ストレージに保存した画像からPublicにリンクを貼る
+**ストレージに保存した画像からPublicにリンクを貼る
 
 `php artisan storage:link`
 
-画像の編集
+**画像の編集
 
 `composer require intervention/image`
