@@ -10,6 +10,8 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 
 ## Proxy 匿名電話に特化
+> Proxy を使うと数行のコードで複数の異なるコミュニケーションチャネルをブリッジできるようになります。ただブリッジするだけではなく、互いの個人情報を伏せたり、互いが接続する時間の長さをコントロールしたり、互いが自分自身のデバイスを使いつつ互いが何を共有するのか制限することが可能です。
+
 [Twilio Proxyの使い方](https://qiita.com/ManabuMiwa/items/1e17a4d428f477ef1c3b)  
 [Twilio Proxy ベータ版リリースのご案内](https://twilio.kddi-web.com/dev/691/)
 
