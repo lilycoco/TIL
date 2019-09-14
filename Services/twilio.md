@@ -10,7 +10,7 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 
 ## Proxy 匿名電話に特化
-https://qiita.com/ManabuMiwa/items/1e17a4d428f477ef1c3b  
-https://twilio.kddi-web.com/dev/691/
+[Twilio Proxyの使い方](https://qiita.com/ManabuMiwa/items/1e17a4d428f477ef1c3b)  
+[Twilio Proxy ベータ版リリースのご案内](https://twilio.kddi-web.com/dev/691/)
 
 [複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
