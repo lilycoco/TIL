@@ -11,4 +11,3 @@ https://sendgrid.com/
 
 [Google Cloud / SendGrid でのメールの送信](https://cloud.google.com/appengine/docs/standard/nodejs/sending-emails-with-sendgrid?hl=ja)  
 
-[Node.js SendGrid email sample for Google App Engine](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/tree/master/appengine/sendgrid)
