@@ -4,7 +4,7 @@
 https://twilio.kddi-web.com/phone-number_regulatory/
 
 
-## Proxy 匿名電話に特化
+## Proxy (匿名電話に特化)
 [Twilio Proxy ベータ版リリースのご案内](https://twilio.kddi-web.com/dev/691/)
 > Proxy を使うと数行のコードで複数の異なるコミュニケーションチャネルをブリッジできるようになります。ただブリッジするだけではなく、互いの個人情報を伏せたり、互いが接続する時間の長さをコントロールしたり、互いが自分自身のデバイスを使いつつ互いが何を共有するのか制限することが可能です。
 
@@ -28,7 +28,8 @@ https://twilio.kddi-web.com/phone-number_regulatory/
             ->create(array(
                 "uniqueName" => "MyFirstSess",
                 "mode" => 'voice-only'
-                ""
+                "date_expiry" => "2015-07-30T20:00:00Z",
+                "ttl"=> 3600,
             ));
         dump($session);
     }
