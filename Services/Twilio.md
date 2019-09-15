@@ -38,6 +38,8 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 ```
 
 **Interactions**
+> Interactionsは、Session内でParticipantsがお互いに交わした通話やメッセージングの個々の履歴を表す、読み取り専用のリソースです。
+
 ```
     public function getInteraction()
     {
