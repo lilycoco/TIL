@@ -64,3 +64,14 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 [Qiita / Twilioを使って、二者間の通話に別の音声を挿入する](https://qiita.com/mobilebiz/items/4490fe5a03c5192ce06f)
 
+## 料金
+
+Aさんの電話--------> Twilio --------->Bさんの電話
+
+上記のような場合、AさんからTwilioが着信、TwilioからBさんが発信となります。
+Twilioアカウント保持者は着信料と発信料をお支払いただく形になります。
+
+- 着信料: 固定・携帯電話共に1分1円
+- 発信料: 固定宛の場合5.4円/分、携帯宛の場合16.2円/分
+- 別途Aさんはキャリアによる通話料が発生
+
