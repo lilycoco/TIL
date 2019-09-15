@@ -12,9 +12,11 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 [Qiita / Twilio Proxyの使い方](https://qiita.com/ManabuMiwa/items/1e17a4d428f477ef1c3b)  
 
-> Sessionsには有効期限 (DateExpiry) や生存時間 (TTL) を設けることができ、これを過ぎるとSessionsのStatusプロパティーがClosedとなり、両者でのコミュニケーションは行えなくなります。
+**オプションパラメーター(Sessions)**
 
-> modeというオプションのパラメーターはSessionで使用できるコミュニケーションのチャンネルを指定するものですが、既定値では`voice-and-message`となっており、音声通話とSMSを両方使用できることを意味しています。 ところが日本のTwilio番号はSMSの送受信に対応しないため、既定値のままではそのSessionのParticipant追加の段階で「割り当てられるTwilio番号の候補がない」という旨のエラーが発生してしまいます。
+> 有効期限 (DateExpiry) や生存時間 (TTL) を過ぎるとSessionsのStatusプロパティーがClosedとなり、両者でのコミュニケーションは行えなくなります。
+
+> mode: コミュニケーションのチャンネルを指定するもの。既定値では`voice-and-message`となっており、音声通話とSMSを両方使用できることを意味しています。 ところが日本のTwilio番号はSMSの送受信に対応しないため、既定値のままではそのSessionのParticipant追加の段階で「割り当てられるTwilio番号の候補がない」という旨のエラーが発生してしまいます。
 これを防ぐには、このmodeパラメーターに明示的に`voice-only`という値を指定して、このSessionでは音声通話のみを許可するようにします。
 
 ```
@@ -27,9 +29,9 @@ https://twilio.kddi-web.com/phone-number_regulatory/
             ->sessions
             ->create(array(
                 "uniqueName" => "MyFirstSess",
-                "mode" => 'voice-only'
                 "date_expiry" => "2015-07-30T20:00:00Z",
                 "ttl"=> 3600,
+                "mode" => 'voice-only'
             ));
         dump($session);
     }
