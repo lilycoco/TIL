@@ -12,6 +12,8 @@ https://github.com/chimurai/http-proxy-middleware
 
 > two code as below give same results
 
+**src/setupProxy.js**
+
 ```
 const proxy = require('http-proxy-middleware')
  
@@ -28,3 +30,6 @@ module.exports = function(app) {
     app.use(proxy('/api/**', { target: 'http://localhost:5000' }));
 };
 ```
+
+## References
+[知っていると捗るcreate-react-appの設定](https://qiita.com/geek_duck/items/6f99a3da15dd39658fff)
