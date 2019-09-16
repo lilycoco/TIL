@@ -65,6 +65,9 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 [Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)  
 
+
+## V字発信（カンファレンス使用）
+
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
 > 複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる
