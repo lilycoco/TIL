@@ -67,6 +67,8 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
+> 複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる
+
 ```
     public function multipleCall()
     {
@@ -91,6 +93,34 @@ https://twilio.kddi-web.com/phone-number_regulatory/
       </Dial>
     </Response>
 
+```
+
+## V字発信（カンファレンス不使用）
+
+> 片方の電話番号にかけ、受信後すぐに相手の電話番号へかける。両者へTwilioからの発信となり、キャリア通信料がかからない
+
+```
+    public function makeACall()
+    {
+        list($twilio,) = $this->getId();
+        $call = $twilio->account->calls->create(
+            env('CALL_NUMBER'),
+            env('TWILIO_NUMBER'),
+            array("url" => env('CALL_BACK_URL_FOR_CALL_FOWARDING'))
+        );
+        dump($call);
+    }
+```
+**CALL_BACK_URL_FOR_CALL_FOWARDING**
+```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Response>
+        <Dial>
+            <Number>
+                +81XXXXXXXXX
+            </Number>
+        </Dial>
+    </Response>
 ```
 
 ## 料金
