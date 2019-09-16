@@ -23,7 +23,9 @@ Wbhookに登録する番号を動的に変更するやり方が不明
 ```
   <?xml version="1.0" encoding="UTF-8"?>
   <Response>
-      <Dial timeout="20" callerId="+81 [twilioで取得した電話番号（転送元電話番号）]">+81 [転送先電話番号]</Dial>
+      <Dial timeout="20" callerId="+81 [twilioで取得した電話番号]">
+        +81 [転送先電話番号]
+      </Dial>
   </Response>
 ```
 
