@@ -63,8 +63,7 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 > V字発信の際、1対1の場合であればのカンファレンス機能は必須ではない。しかし、通知メッセージを流したい場合、例えば通話終了3分前に自動音声で延長の確認を取る場合などはカンファレンス機能が必要。
 
-[Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)　　
-[Qiita / Twilioを使って、二者間の通話に別の音声を挿入する](https://qiita.com/mobilebiz/items/4490fe5a03c5192ce06f)
+[Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)  
 
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
@@ -105,3 +104,6 @@ Twilioアカウント保持者は着信料と発信料をお支払いただく�
 - 発信料: 固定宛の場合5.4円/分、携帯宛の場合16.2円/分
 - 別途Aさんはキャリアによる通話料が発生
 
+## References
+
+[Qiita / Twilioを使って、二者間の通話に別の音声を挿入する](https://qiita.com/mobilebiz/items/4490fe5a03c5192ce06f)
