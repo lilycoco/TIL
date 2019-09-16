@@ -69,24 +69,31 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
 ```
-<?php
-    require __DIR__ . '/vendor/autoload.php';
-    use Twilio\Rest\Client;
-
-    $account_sid = 'ACxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-    $auth_token = 'a7xxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-    $twilio_number = "+815xxxxx";   // From a Twilio number in your account
-    $tel_nos = array('+818xxxxx','+819xxxxx');  // Call number
-    $client = new Client($account_sid, $auth_token);
-    
-    foreach($tel_nos as $tel_no):
-        $call = $client->account->calls->create(
-            $tel_no, 
-            $twilio_number, 
-            array( "url" => "https://xxx/xxx.xml" )
-        );
-    endforeach;
+    public function multipleCall()
+    {
+        list($twilio,) = $this->getId();
+        $callNumbers = array(env('CALL_NUMBER'), env('CALL_NUMBER_2'));
+        foreach ($callNumbers as $Number) {
+            $call = $twilio->account->calls->create(
+                $Number,
+                env('TWILIO_NUMBER'),
+                array("url" => env('CALL_BACK_URL_FOR_CONFERENCE'))
+            );
+        }
+        dump($call);
+    }
 ```
+**CALL_BACK_URL_FOR_CONFERENCE**
+```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Response>
+      <Dial>
+        <Conference>My conference</Conference>
+      </Dial>
+    </Response>
+
+```
+
 ## 料金
 
 Aさんの電話--------> Twilio --------->Bさんの電話
