@@ -64,7 +64,7 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 > V字発信の際、1対1の場合であればのカンファレンス機能は必須ではない。しかし、通知メッセージを流したい場合、例えば通話終了3分前に自動音声で延長の確認を取る場合などはカンファレンス機能が必要。
 
-[Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)
+[Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)　　
 [Qiita / Twilioを使って、二者間の通話に別の音声を挿入する](https://qiita.com/mobilebiz/items/4490fe5a03c5192ce06f)
 
 ## 料金
