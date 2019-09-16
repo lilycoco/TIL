@@ -70,7 +70,7 @@ https://twilio.kddi-web.com/phone-number_regulatory/
 
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
-> 複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる
+> 複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる。両者へキャリア通信料はかからないが、別途カンファレンス料金がかかる
 
 ```
     public function multipleCall()
