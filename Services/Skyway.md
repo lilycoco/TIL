@@ -7,12 +7,10 @@
  
 [WebRTC Platform](https://console-webrtc-free.ecl.ntt.com/)
 
-前編 getUserMedia()の基本 
-
 
 [WebRTCデバッグ入門](https://qiita.com/yusuke84/items/8d232c8d24156f16e8ba)
 
-[ブラウザからメディアデバイスを操る](https://app.codegrid.net/entry/2017-get-user-media-1)
+[ブラウザからメディアデバイスを操る 前編 getUserMedia()の基本](https://app.codegrid.net/entry/2017-get-user-media-1)
 
 https://webrtc.ecl.ntt.com/skyway-js-sdk-doc/ja/mediaconnection/#answer-options-object 
 
