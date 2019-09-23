@@ -187,7 +187,10 @@ call back urlが必要。実装がProxyに比べ大変？
 ```
 ## TwiML 生成
 [twilio-php](https://jp.twilio.com/docs/libraries/reference/twilio-php/)  
-[TwilioSDKで翻弄されています](https://hisa-tech.site/2019/05/3098/)
+
+[TwilioSDKで翻弄されています](https://hisa-tech.site/2019/05/3098/)  
+
+[PHPおよびLaravelを使用したワンクリック通話](https://jp.twilio.com/docs/voice/tutorials/click-to-call-php-laravel)
 
 ## 料金
 
