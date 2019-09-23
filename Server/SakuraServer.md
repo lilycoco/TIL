@@ -10,7 +10,7 @@
 
 ## さくらからgithubへのSSH接続の設定（Githubに公開鍵、サーバー側に秘密鍵を設置）
 
-[GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~ （サーバーにログイン後に鍵を生成）](https://qiita.com/shizuma/items/2b2f873a0034839e47ce) 
+[GitHubでssh接続する手順 ~公開鍵・秘密鍵の生成から （サーバーにログイン後に鍵を生成）](https://qiita.com/shizuma/items/2b2f873a0034839e47ce) 
 
 [さくらレンタルサーバーにSSH＆公開鍵で接続してみよう！　(ローカルとの接続)](http://vdeep.net/sakura-ssh) 
 
