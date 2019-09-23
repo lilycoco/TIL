@@ -185,6 +185,9 @@ call back urlが必要。実装がProxyに比べ大変？
         </Dial>
     </Response>
 ```
+## TwiML 生成
+
+[TwilioSDKで翻弄されています](https://hisa-tech.site/2019/05/3098/)
 
 ## 料金
 
