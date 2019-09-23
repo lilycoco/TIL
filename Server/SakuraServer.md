@@ -1,34 +1,12 @@
 # さくらサーバー
 
-▼環境設定の手順
-
-[https://neenee.sakura.ne.jp/](https://neenee.sakura.ne.jp/?fbclid=IwAR33gJZ-F0evaclfatPISHOyKix5pB4ONud0fRaI0KLVqhhVM_DmiqK5MUY) 
-
-■さくらにアップするまでの手順
+## さくらにアップするまでの手順
 
 [【 超簡易的 】githubにpushで、さくらサーバーに自動デプロイ](https://qiita.com/prex-uchida/items/f8bc05eb91b944b6214e) 
 
-## さくらインターネット　サーバー登録
-
-[ステージング環境](https://www.notion.so/a1d19833a4cd42c0aabafcf363fbda18)
-
-さくらサーバーログイン
-
-```
-ssh tanbobcat4@tanbobcat4.sakura.ne.jp
-ssh neenee_stg
-```
-[本番環境](https://www.notion.so/23a184ebd16b4f0db977e0867e47936d)
-
-```
-ssh neenee@neenee.sakura.ne.jp
-ssh neenee_master
-```
 ## さくらサーバーにgitをインストール
 
-    さくらインターネットのレンタルサーバーへGitをソースコードからインストールする手順
-
-    [https://itlogs.net/sakura-internet-git-install/](https://itlogs.net/sakura-internet-git-install/) 
+[さくらインターネットのレンタルサーバーへGitをソースコードからインストールする手順](https://itlogs.net/sakura-internet-git-install/) 
 
 ## さくらからgithubへのSSH接続の設定（Githubに公開鍵、サーバー側に秘密鍵を設置）
 
@@ -40,7 +18,6 @@ ssh neenee_master
 
 [SSHなるものをよくわからずに使っている人のための手引書](https://qiita.com/kenju/items/b09199c4b3e7203a2867) 
 
-scp id_rsa.pub tanbobcat4@tanbobcat4.sakura.ne.jp:/home/tanbobcat4/.ssh/authorized_keys
 
 ## サーバー上で表示
 
