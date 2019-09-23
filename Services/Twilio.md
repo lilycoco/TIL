@@ -8,6 +8,15 @@
 - 通話にかかる費用を管理するため、個別にかかるキャリア通信料をなるべく発生させない。（Twilioにかかる料金のみに止める）
 - ログを取得する(通話開始、終了、通話時間)
 
+## Set up
+
+Twilioのライブラリをインストールする  
+```
+composer require twilio/sdk
+```
+
+[The Twilio PHP ヘルパーライブラリー](https://jp.twilio.com/docs/libraries/php)
+
 ## Twilioを介しての通話
 > Twilioで取得した電話番号に電話すると、相手の電話番号に転送される
 
