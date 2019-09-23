@@ -12,5 +12,6 @@ Host test
   ServerAliveInterval 60
 ```
 
-[さくらレンタルサーバーにSSH＆公開鍵で接続してみよう！](http://vdeep.net/sakura-ssh)
+[さくらレンタルサーバーにSSH＆公開鍵で接続してみよう！](http://vdeep.net/sakura-ssh)  
+[あなたが現在インターネットに接続しているグローバルIPアドレス確認](https://www.cman.jp/network/support/go_access.cgi)
 
