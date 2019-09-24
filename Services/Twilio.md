@@ -123,7 +123,7 @@ V字発信出来ない？
 別途カンファレンス料金がかかる。  
 call back urlが必要。実装がProxyに比べ大変？ 
 
-```
+```php
     public function multipleCall()
     {
         list($twilio,) = $this->getId();
@@ -139,7 +139,7 @@ call back urlが必要。実装がProxyに比べ大変？
     }
 ```
 **CALL_BACK_URL_FOR_CONFERENCE**
-```
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
       <Dial>
@@ -164,7 +164,7 @@ call back urlが必要。実装がProxyに比べ大変？
 ### *Cons*
 call back urlが必要。実装がProxyに比べ大変？ 
 
-```
+```php
     public function makeACall()
     {
         list($twilio,) = $this->getId();
@@ -177,7 +177,7 @@ call back urlが必要。実装がProxyに比べ大変？
     }
 ```
 **CALL_BACK_URL_FOR_CALL_FOWARDING**
-```
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
         <Dial>
