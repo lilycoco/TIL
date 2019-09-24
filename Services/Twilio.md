@@ -5,7 +5,7 @@
   - [条件](#条件)  
 - [Set up](#set-up)
 - [Twilioを介しての通話](#Twilioを介しての通話)
-- [Proxy (匿名電話に特化)](#Proxy (匿名電話に特化))
+- [Proxy（匿名電話に特化）](#Proxy（匿名電話に特化）)
 - [V字発信（Conference使用）](#V字発信（Conference使用）)
 - [V字発信（Conference不使用）](#V字発信（Conference不使用）)
 - [TwiML 動的生成](#TwiML-動的生成)
@@ -52,7 +52,7 @@ composer require twilio/sdk
   </Response>
 ```
 
-## Proxy (匿名電話に特化)
+## Proxy（匿名電話に特化）
 > １つの電話番号で複数のSessionを作ることが出来、同じSessionに登録されたParticipantの片方がSessionが作成された電話番号にかけるともう一方のParticipantと通話ができる。互いの個人情報を伏せたり、接続する時間の長さをコントロールすることが可能。
 
 ***Pros***
