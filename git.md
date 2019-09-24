@@ -1,5 +1,7 @@
 # Git
 
+[よく使う Vim のコマンドまとめ](https://qiita.com/hide/items/5bfe5b322872c61a6896)
+
 ## **きれいなブランチをつくる**
 
     git checkout -b topic/## upstream/develop
