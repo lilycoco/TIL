@@ -33,13 +33,13 @@ composer require twilio/sdk
 ## Twilioを介しての通話
 > Twilioで取得した電話番号に電話すると、相手の電話番号に転送される
 
-### *Pros*
-シンプル
+***Pros***
+- シンプル
 
-### *Cons*
-複数の電話番号が必要  
-発信者にキャリア通信料がかかる  
-Wbhookに登録する番号を動的に変更するやり方が不明  
+***Cons***
+- 複数の電話番号が必要  
+- 発信者にキャリア通信料がかかる  
+- Wbhookに登録する番号を動的に変更するやり方が不明  
 
 **以下のXMLをTwilioで取得した電話番号のWebhookに登録する**
 
@@ -55,13 +55,13 @@ Wbhookに登録する番号を動的に変更するやり方が不明
 ## Proxy (匿名電話に特化)
 > １つの電話番号で複数のSessionを作ることが出来、同じSessionに登録されたParticipantの片方がSessionが作成された電話番号にかけるともう一方のParticipantと通話ができる。互いの個人情報を伏せたり、接続する時間の長さをコントロールすることが可能。
 
-### *Pros*
-電話番号の扱いが簡単で、call back urlがなくても実装可能。ログも取得できる。    
-１つの電話番号で実装可能。  
+***Pros***
+- 電話番号の扱いが簡単で、call back urlがなくても実装可能。ログも取得できる。    
+- １つの電話番号で実装可能。  
 
-### *Cons*
-別途Proxy料金がかかる。  
-V字発信出来ない？  
+***Cons***
+- 別途Proxy料金がかかる。  
+- V字発信出来ない？  
  
  
 [Twilio Proxy ベータ版リリースのご案内](https://twilio.kddi-web.com/dev/691/)
@@ -124,13 +124,13 @@ V字発信出来ない？
 
 [Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)  
 
-### *Pros*
-１つの電話番号のみで実装可能。  
-両者へキャリア通信料がかからない。  
+***Pros***
+- １つの電話番号のみで実装可能。  
+- 両者へキャリア通信料がかからない。  
 
-### *Cons*
-別途カンファレンス料金がかかる。  
-call back urlが必要。実装がProxyに比べ大変？ 
+***Cons***
+- 別途カンファレンス料金がかかる。  
+- call back urlが必要。実装がProxyに比べ大変？ 
 
 
 [Making Calls](https://www.twilio.com/docs/voice/make-calls)  
@@ -169,13 +169,13 @@ call back urlが必要。実装がProxyに比べ大変？
 
 > Twilioから片方の電話番号にかけ、受信後すぐに相手の電話番号へかける。
 
-### *Pros*
-１つの電話番号のみで実装可能(?)。←要確認    
-両者へキャリア通信料がかからない。  
-別途カンファレンス料金がかからない。  
+***Pros***
+- １つの電話番号のみで実装可能(?)。←要確認    
+- 両者へキャリア通信料がかからない。  
+- 別途カンファレンス料金がかからない。  
 
-### *Cons*
-call back urlが必要。実装がProxyに比べ大変？ 
+***Cons***
+- call back urlが必要。実装がProxyに比べ大変？ 
 
 ```php
     public function makeACall($callNumber = null)
