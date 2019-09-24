@@ -107,7 +107,8 @@ V字発信出来ない？
 
 ## Conference
 
-> V字発信の際、1対1の場合であればのカンファレンス機能は必須ではない。しかし、通知メッセージを流したい場合、例えば通話終了3分前に自動音声で延長の確認を取る場合などはカンファレンス機能が必要。
+> V字発信の際、1対1の場合であればのカンファレンス機能は必須ではない。
+ただし通知メッセージを流したい場合など、例えば「通話終了3分前に自動音声で延長の確認を取る場合」などはカンファレンス機能が必要。
 
 [Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)  
 
@@ -124,7 +125,7 @@ V字発信出来ない？
 call back urlが必要。実装がProxyに比べ大変？ 
 
 ```php
-    public function multipleCall()
+    public function multipleCall($roomName = null)
     {
         list($twilio,) = $this->getId();
         $callNumbers = array(env('CALL_NUMBER'), env('CALL_NUMBER_2'));
@@ -132,18 +133,25 @@ call back urlが必要。実装がProxyに比べ大変？
             $call = $twilio->account->calls->create(
                 $Number,
                 env('TWILIO_NUMBER'),
-                array("url" => env('CALL_BACK_URL_FOR_CONFERENCE'))
+                array("url" => env('CALL_BACK_URL_FOR_CONFERENCE') . "?room=" . $roomName)
             );
         }
         dump($call);
     }
 ```
+### TwiML Bins
+TwiML Binsに下記を記述し、
+https://handler.twilio.com/twiml/EH...?room=a でアクセスすることでroomを作成できる。
+
+https://jp.twilio.com/console/twiml-bins
+https://www.twilio.com/docs/runtime/tutorials/twiml-bins
+
 **CALL_BACK_URL_FOR_CONFERENCE**
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
       <Dial>
-        <Conference>My conference</Conference>
+        <Conference>{{room}}</Conference>
       </Dial>
     </Response>
 ```
@@ -161,21 +169,6 @@ https://www.twilio.com/docs/voice/make-calls
 
 > 例えばURL部分を “url” => “https://example.twil.io/room?name=a” とした場合、https://example.twil.io/room 内でnameを引数にaというroomを作成
 
-### TwiML Bins
-TwiML Binsに下記を記述し、
-https://handler.twilio.com/twiml/EH...?room=a でアクセスすることでroomを作成できる。
-
-https://jp.twilio.com/console/twiml-bins
-https://www.twilio.com/docs/runtime/tutorials/twiml-bins
-
-```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <Response>
-     <Dial>
-       <Conference>{{room}}</Conference>
-     </Dial>
-    </Response>
-```
 
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
@@ -193,13 +186,13 @@ https://www.twilio.com/docs/runtime/tutorials/twiml-bins
 call back urlが必要。実装がProxyに比べ大変？ 
 
 ```php
-    public function makeACall()
+    public function makeACall($roomName = null)
     {
         list($twilio,) = $this->getId();
         $call = $twilio->account->calls->create(
             env('CALL_NUMBER'),
             env('TWILIO_NUMBER'),
-            array("url" => env('CALL_BACK_URL_FOR_CALL_FOWARDING'))
+            array("url" => env('CALL_BACK_URL_FOR_CALL_FOWARDING') . "?room=" . $roomName)
         );
         dump($call);
     }
