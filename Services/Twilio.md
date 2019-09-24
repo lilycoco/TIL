@@ -146,7 +146,35 @@ call back urlが必要。実装がProxyに比べ大変？
         <Conference>My conference</Conference>
       </Dial>
     </Response>
+```
 
+### API発信
+発信の際のurlパラメータに二人専用のTwiMLを指定
+https://www.twilio.com/docs/voice/make-calls
+```php
+    $call = $twilio->calls
+    ->create(“+14155551212”, // to
+             “+15017122661", // from
+             array(“url” => “http://demo.twilio.com/docs/voice.xml”)
+            );
+```
+
+> 例えばURL部分を “url” => “https://example.twil.io/room?name=a” とした場合、https://example.twil.io/room 内でnameを引数にaというroomを作成
+
+### TwiML Bins
+TwiML Binsに下記を記述し、
+https://handler.twilio.com/twiml/EH...?room=a でアクセスすることでroomを作成できる。
+
+https://jp.twilio.com/console/twiml-bins
+https://www.twilio.com/docs/runtime/tutorials/twiml-bins
+
+```xml
+    <?xml version=“1.0” encoding=“UTF-8"?>
+    <Response>
+     <Dial>
+       <Conference>{{room}}</Conference>
+     </Dial>
+    </Response>
 ```
 
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
