@@ -117,10 +117,7 @@ composer require twilio/sdk
 
 ## V字発信（Conference使用）
 > Twilioから複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる。
-
-**Conference**
-> V字発信の際、1対1の場合であればのカンファレンス機能は必須ではない。
-ただし通知メッセージを流したい場合など、例えば「通話終了3分前に自動音声で延長の確認を取る場合」などはカンファレンス機能が必要。
+> V字発信へカンファレンス機能は必須ではないが、通知メッセージを流したい場合など（例えば、自動音声で通話終了3分前に延長の確認をしたい場合）はカンファレンス機能が必要。
 
 [Twilioカンファレンス機能（同時通話）](https://twilio.kddi-web.com/dev/636/)  
 
@@ -131,11 +128,6 @@ composer require twilio/sdk
 ***Cons***
 - 別途カンファレンス料金がかかる。  
 - call back urlが必要。実装がProxyに比べ大変？ 
-
-
-[Making Calls](https://www.twilio.com/docs/voice/make-calls)  
-
-[Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
 ```php
     public function multipleCall($roomName = null)
@@ -152,7 +144,8 @@ composer require twilio/sdk
     }
 ```
 
-[TwiML Bins](https://www.twilio.com/docs/runtime/tutorials/twiml-bins)
+[Making Calls](https://www.twilio.com/docs/voice/make-calls)  
+[Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
 **TWIML_BIN_FOR_CONFERENCE**
 ```xml
@@ -163,6 +156,7 @@ composer require twilio/sdk
       </Dial>
     </Response>
 ```
+[TwiML Bins](https://www.twilio.com/docs/runtime/tutorials/twiml-bins)
 
 
 ## V字発信（Conference不使用）
