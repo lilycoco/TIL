@@ -123,6 +123,11 @@ V字発信出来ない？
 別途カンファレンス料金がかかる。  
 call back urlが必要。実装がProxyに比べ大変？ 
 
+
+[Making Calls](https://www.twilio.com/docs/voice/make-calls)  
+
+[Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
+
 ```php
     public function multipleCall($roomName = null)
     {
@@ -140,7 +145,7 @@ call back urlが必要。実装がProxyに比べ大変？
 
 [TwiML Bins](https://www.twilio.com/docs/runtime/tutorials/twiml-bins)
 
-**CALL_BACK_URL_FOR_CONFERENCE**
+**TWIML_BIN_FOR_CONFERENCE**
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
@@ -149,11 +154,6 @@ call back urlが必要。実装がProxyに比べ大変？
       </Dial>
     </Response>
 ```
-
-https://www.twilio.com/docs/voice/make-calls
-
-
-[Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
 
 
 ## V字発信（カンファレンス不使用）
@@ -179,7 +179,7 @@ call back urlが必要。実装がProxyに比べ大変？
         );
     }
 ```
-**CALL_BACK_URL_FOR_CALL_FOWARDING**
+**TWIML_BIN_FOR_CALL_FOWARDING**
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
@@ -188,7 +188,8 @@ call back urlが必要。実装がProxyに比べ大変？
         </Dial>
     </Response>
 ```
-## TwiML 生成
+
+## TwiML 動的生成
 [twilio-php](https://jp.twilio.com/docs/libraries/reference/twilio-php/)  
 
 [TwilioSDKで翻弄されています](https://hisa-tech.site/2019/05/3098/)  
