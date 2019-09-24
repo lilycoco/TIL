@@ -6,8 +6,8 @@
 - [Set up](#set-up)
 - [Twilioを介しての通話](#Twilioを介しての通話)
 - [Proxy](#Proxy)
-- [V字発信/Conference使用](#V字発信/Conference使用)
-- [V字発信/Conference不使用](#V字発信/Conference不使用)
+- [V字発信 Conference使用](#V字発信-Conference使用)
+- [V字発信 Conference不使用](#V字発信-Conference不使用)
 - [TwiML 動的生成](#TwiML-動的生成)
 - [料金](#料金)
 - [電話番号規制について](#電話番号規制について)
@@ -115,7 +115,7 @@ composer require twilio/sdk
     }
 ```
 
-## V字発信/Conference使用
+## V字発信 Conference使用
 > Twilioから複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる。
 > V字発信へカンファレンス機能は必須ではないが、通知メッセージを流したい場合など（例えば、自動音声で通話終了3分前に延長の確認をしたい場合）はカンファレンス機能が必要。
 
@@ -159,7 +159,7 @@ composer require twilio/sdk
 [TwiML Bins](https://www.twilio.com/docs/runtime/tutorials/twiml-bins)
 
 
-## V字発信/Conference不使用
+## V字発信 Conference不使用
 
 > Twilioから片方の電話番号にかけ、受信後すぐに相手の電話番号へかける。
 
