@@ -169,7 +169,7 @@ https://jp.twilio.com/console/twiml-bins
 https://www.twilio.com/docs/runtime/tutorials/twiml-bins
 
 ```xml
-    <?xml version=“1.0” encoding=“UTF-8"?>
+    <?xml version="1.0" encoding="UTF-8"?>
     <Response>
      <Dial>
        <Conference>{{room}}</Conference>
