@@ -79,7 +79,6 @@ V字発信出来ない？
                 "ttl"=> 3600,
                 "mode" => 'voice-only'
             ));
-        dump($session);
     }
 ```
 
@@ -133,18 +132,13 @@ call back urlが必要。実装がProxyに比べ大変？
             $call = $twilio->account->calls->create(
                 $Number,
                 env('TWILIO_NUMBER'),
-                array("url" => env('CALL_BACK_URL_FOR_CONFERENCE') . "?room=" . $roomName)
+                array("url" => env('TWIML_BIN_FOR_CONFERENCE') . "?room=" . $roomName)
             );
         }
-        dump($call);
     }
 ```
-### TwiML Bins
-TwiML Binsに下記を記述し、
-https://handler.twilio.com/twiml/EH...?room=a でアクセスすることでroomを作成できる。
 
-https://jp.twilio.com/console/twiml-bins
-https://www.twilio.com/docs/runtime/tutorials/twiml-bins
+[TwiML Bins](https://www.twilio.com/docs/runtime/tutorials/twiml-bins)
 
 **CALL_BACK_URL_FOR_CONFERENCE**
 ```xml
@@ -156,18 +150,7 @@ https://www.twilio.com/docs/runtime/tutorials/twiml-bins
     </Response>
 ```
 
-### API発信
-発信の際のurlパラメータに二人専用のTwiMLを指定
 https://www.twilio.com/docs/voice/make-calls
-```php
-    $call = $twilio->calls
-    ->create(“+14155551212”, // to
-             “+15017122661", // from
-             array(“url” => “http://demo.twilio.com/docs/voice.xml”)
-            );
-```
-
-> 例えばURL部分を “url” => “https://example.twil.io/room?name=a” とした場合、https://example.twil.io/room 内でnameを引数にaというroomを作成
 
 
 [Qiita / 複数の電話番号に電話をかける。](https://qiita.com/joohounsong/items/36da4e67b1652c60bf57)
@@ -186,15 +169,14 @@ https://www.twilio.com/docs/voice/make-calls
 call back urlが必要。実装がProxyに比べ大変？ 
 
 ```php
-    public function makeACall($roomName = null)
+    public function makeACall($callNumber = null)
     {
         list($twilio,) = $this->getId();
         $call = $twilio->account->calls->create(
             env('CALL_NUMBER'),
             env('TWILIO_NUMBER'),
-            array("url" => env('CALL_BACK_URL_FOR_CALL_FOWARDING') . "?room=" . $roomName)
+            array("url" => env('TWIML_BIN_FOR_CALL_FOWARDING') . "?number=" . $callNumber)
         );
-        dump($call);
     }
 ```
 **CALL_BACK_URL_FOR_CALL_FOWARDING**
@@ -202,9 +184,7 @@ call back urlが必要。実装がProxyに比べ大変？
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
         <Dial>
-            <Number>
-                +81XXXXXXXXX
-            </Number>
+           {{number}}
         </Dial>
     </Response>
 ```
