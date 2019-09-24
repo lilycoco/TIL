@@ -5,9 +5,9 @@
   - [条件](#条件)  
 - [Set up](#set-up)
 - [Twilioを介しての通話](#Twilioを介しての通話)
-- [Proxy（匿名電話に特化）](#Proxy（匿名電話に特化）)
-- [V字発信（Conference使用）](#V字発信（Conference使用）)
-- [V字発信（Conference不使用）](#V字発信（Conference不使用）)
+- [Proxy](#Proxy)
+- [V字発信/Conference使用](#V字発信/Conference使用)
+- [V字発信/Conference不使用](#V字発信/Conference不使用)
 - [TwiML 動的生成](#TwiML-動的生成)
 - [料金](#料金)
 - [電話番号規制について](#電話番号規制について)
@@ -52,8 +52,8 @@ composer require twilio/sdk
   </Response>
 ```
 
-## Proxy（匿名電話に特化）
-> １つの電話番号で複数のSessionを作ることが出来、同じSessionに登録されたParticipantの片方がSessionが作成された電話番号にかけるともう一方のParticipantと通話ができる。互いの個人情報を伏せたり、接続する時間の長さをコントロールすることが可能。
+## Proxy
+> 匿名電話に特化しており、１つの電話番号で複数のSessionを作ることが出来、同じSessionに登録されたParticipantの片方がSessionが作成された電話番号にかけるともう一方のParticipantと通話ができる。互いの個人情報を伏せたり、接続する時間の長さをコントロールすることが可能。
 
 ***Pros***
 - 電話番号の扱いが簡単で、call back urlがなくても実装可能。ログも取得できる。    
@@ -115,7 +115,7 @@ composer require twilio/sdk
     }
 ```
 
-## V字発信（Conference使用）
+## V字発信/Conference使用
 > Twilioから複数の番号に一斉に電話をかけ、同じカンファレンスルームにリダイレクトさせる。
 > V字発信へカンファレンス機能は必須ではないが、通知メッセージを流したい場合など（例えば、自動音声で通話終了3分前に延長の確認をしたい場合）はカンファレンス機能が必要。
 
@@ -159,7 +159,7 @@ composer require twilio/sdk
 [TwiML Bins](https://www.twilio.com/docs/runtime/tutorials/twiml-bins)
 
 
-## V字発信（Conference不使用）
+## V字発信/Conference不使用
 
 > Twilioから片方の電話番号にかけ、受信後すぐに相手の電話番号へかける。
 
