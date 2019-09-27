@@ -22,7 +22,7 @@
 
 ## Set up
 
-Twilioのライブラリをインストールする  
+Twilioのライブラリをインストールする 
 
 ```
 composer require twilio/sdk
