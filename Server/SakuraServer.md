@@ -40,3 +40,7 @@
 ## Webhook
 
 [Webhookとは？](https://qiita.com/soarflat/items/ed970f6dc59b2ab76169)
+
+## References
+
+[さくらのレンタルサーバ CRON設定マニュアル](https://manual.leafworks.jp/file/sakura_cron.pdf)
