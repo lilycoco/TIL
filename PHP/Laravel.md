@@ -21,3 +21,6 @@
 
 **画像の編集**  
 `composer require intervention/image`
+
+**テーブル作成**
+`php artisan make:migration create_users_table`
