@@ -4,23 +4,23 @@
 
 
 
-**コマンド一覧表示**  
+### コマンド一覧表示  
 `php artisan list`
 
-**コントローラー作成**  
+### コントローラー作成
 `php artisan make:controller コントローラ名`
 
-**マイグレーション**  
+### マイグレーション
 `php artisan migrate:refresh --seed`
 
-**スケージュールラン**  
+### スケージュールラン 
 `php artisan schedule:run`
 
-**ストレージに保存した画像からPublicにリンクを貼る**  
+### ストレージに保存した画像からPublicにリンクを貼る
 `php artisan storage:link`
 
-**画像の編集**  
+### 画像の編集
 `composer require intervention/image`
 
-**テーブル作成**
+### テーブル作成
 `php artisan make:migration create_users_table`
