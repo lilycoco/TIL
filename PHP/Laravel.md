@@ -24,3 +24,6 @@
 
 ### テーブル作成
 `php artisan make:migration create_users_table`
+
+### Seeder作成
+`php artisan make:seeder UsersTableSeeder`
