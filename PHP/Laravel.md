@@ -27,3 +27,6 @@
 
 ### Seeder作成
 `php artisan make:seeder UsersTableSeeder`
+
+### Model作成
+`php artisan make:model Flight`
