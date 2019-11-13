@@ -24,9 +24,10 @@ origin を削除
 Commit 削除
 `git revert commitNo`
 
+### 指定したコミットを、ブランチを変えて作り直したり、ひとまとめにしたりして、ログを綺麗にする
+`git rebert [blunch]`
 
-
-## **きれいなブランチをつくる**
+### きれいなブランチをつくる
 
     git checkout -b topic/## upstream/develop
     git checkout -b topic/## origin/develop
