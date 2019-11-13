@@ -25,7 +25,9 @@ Commit 削除
 `git revert commitNo`
 
 ### 指定したコミットを、ブランチを変えて作り直したり、ひとまとめにしたりして、ログを綺麗にする
-`git rebert [blunch]`
+
+    git rebert [blunch]
+    git push -f 
 
 ### きれいなブランチをつくる
 
