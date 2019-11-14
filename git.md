@@ -29,6 +29,15 @@ Commit 削除
     git rebert [blunch]
     git push -f 
 
+### GithubにPushしたコミットを削除する
+
+    - 作業中のブランチ名AをBに変更
+    - developをきれいにしてから、developからブランチAを作成
+    - ブランチAから、Bのコミットをチェリーピックする
+    - ブランチAをforce push
+    - ブランチBを削除
+    
+
 ### きれいなブランチをつくる
 
     git checkout -b topic/## upstream/develop
