@@ -32,7 +32,8 @@ Commit 削除
 ### GithubにPushしたコミットを削除する
 
     - 作業中のブランチ名AをBに変更
-    - developをきれいにしてから、developからブランチAを作成
+    - developをきれいにする　reset -HARD
+    - developからブランチAを作成
     - ブランチAから、Bのコミットをチェリーピックする
     - ブランチAをforce push
     - ブランチBを削除
