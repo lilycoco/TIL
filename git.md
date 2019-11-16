@@ -24,6 +24,11 @@ origin を削除
 Commit 削除
 `git revert commitNo`
 
+### Fork して push
+    git remote add upstream [fork元 url]
+    git remote -v // Fork元が追加されているか確認
+    git pull upstream master
+
 ### 指定したコミットを、ブランチを変えて作り直したり、ひとまとめにしたりして、ログを綺麗にする
 
     git rebert [blunch]
