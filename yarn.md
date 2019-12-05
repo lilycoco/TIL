@@ -15,3 +15,5 @@ https://github.com/nvm-sh/nvm
 `nvm install 10.15.3[バージョン指定]`
 
 `yarn install`
+
+`nvm alias default v10.15.3`
