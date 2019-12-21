@@ -9,6 +9,8 @@
 ### asyncData / fetch
   
   - loding component
+  
+  [async/await 入門（JavaScript）](https://qiita.com/soarflat/items/1a9613e023200bbebcb3)
 
 ### beforeCreate
 
