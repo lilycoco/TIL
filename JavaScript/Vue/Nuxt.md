@@ -6,17 +6,23 @@
 
 ## Lifecycle 
 
-- asyncData / fetch
+### asyncData / fetch
 
-- beforeCreate
+### beforeCreate
 
   - create instance
 
-- created
+### created
 
-- beforeMount
+### beforeMount
 
-- mounted
+### mounted
 
-- 
+### bsforeUpdate
+
+### updated
+
+### beforeDestroy
+
+### destroyed 
 
