@@ -8,24 +8,24 @@
 
 ### asyncData / fetch
   
-  *loding component* 
+  - loding component
 
 ### beforeCreate
 
-  *create instance*
-  #### data object is reactivated
+  - create instance
+  - data object is reactivated
 
 ### created
 
 ### beforeMount
 
-  #### create DOM
+  - create DOM
 
 ### mounted
 
-   - getElementByID
-   - jQuery
-   - this.$el
+    getElementByID
+    jQuery
+    this.$el
 
 ### bsforeUpdate
   
