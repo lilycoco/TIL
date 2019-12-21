@@ -8,11 +8,11 @@
 
 ### asyncData / fetch
   
-  #### loding component 
+  *loding component* 
 
 ### beforeCreate
 
-  #### create instance
+  *create instance*
   #### data object is reactivated
 
 ### created
