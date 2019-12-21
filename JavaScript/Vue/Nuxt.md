@@ -7,22 +7,35 @@
 ## Lifecycle 
 
 ### asyncData / fetch
+  
+  #### loding component 
 
 ### beforeCreate
 
   #### create instance
+  #### data object is reactivated
 
 ### created
 
 ### beforeMount
 
+  #### create DOM
+
 ### mounted
 
+   - getElementByID
+   - jQuery
+   - this.$el
+
 ### bsforeUpdate
+  
+  #### rerender
 
 ### updated
 
 ### beforeDestroy
+
+  #### destroy instance
 
 ### destroyed 
 
