@@ -10,5 +10,13 @@
 
 - beforeCreate
 
+  - create instance
+
 - created
+
+- beforeMount
+
+- mounted
+
+- 
 
