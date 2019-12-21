@@ -29,13 +29,13 @@
 
 ### bsforeUpdate
   
-  #### rerender
+  - rerender
 
 ### updated
 
 ### beforeDestroy
 
-  #### destroy instance
+  - destroy instance
 
 ### destroyed 
 
