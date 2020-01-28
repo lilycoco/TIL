@@ -2,6 +2,8 @@
 
 [よく使う Vim のコマンドまとめ](https://qiita.com/hide/items/5bfe5b322872c61a6896)
 
+リモートリポジトリから最新情報をローカルリポジトリに持ってくる
+`git fetch` 
 
 バージョン確認
 `git --version `
