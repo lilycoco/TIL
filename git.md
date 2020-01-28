@@ -2,28 +2,31 @@
 
 [よく使う Vim のコマンドまとめ](https://qiita.com/hide/items/5bfe5b322872c61a6896)
 
-リモートリポジトリから最新情報をローカルリポジトリに持ってくる
+### マージする前の状態に戻す
+`git merge --abort` 
+
+### リモートリポジトリから最新情報をローカルリポジトリに持ってくる
 `git fetch` 
 
-バージョン確認
+### バージョン確認
 `git --version `
 
-登録されている名前とURLの確認
+### 登録されている名前とURLの確認
 `git remote -v `
 
-origin の URL を変更
+### origin の URL を変更
 `git remote set-url origin 新しいURL`
 
-origin を削除
+### origin を削除
 `git remote rm origin`
 
-ソースツリーの表示
+### ソースツリーの表示
 `git log graff `
 
-変更点を一旦退避させる
+### 変更点を一旦退避させる
 `git stash `
 
-Commit 削除
+### Commit 削除
 `git revert commitNo`
 
 ### Fork して push
