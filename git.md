@@ -2,6 +2,9 @@
 
 [よく使う Vim のコマンドまとめ](https://qiita.com/hide/items/5bfe5b322872c61a6896)
 
+### バージョン管理の状態を確認する
+`git status`
+
 ### マージする前の状態に戻す
 `git merge --abort` 
 
