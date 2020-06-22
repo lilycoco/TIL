@@ -1,4 +1,4 @@
-# BasicTechnology 
+# Technology 
 
 [Webを支える技術 要約](https://muscletech.tokyo/web-technology/)
 
@@ -8,3 +8,6 @@
 ## Web API
 [Web API: The Good Partsを読んだまとめ](https://qiita.com/mitsuya/items/e33d5ac202b41447cfec)
 
+
+# UML
+[よく聞くUMLって何？](https://qiita.com/github129/items/80d39f2f043489033076)
