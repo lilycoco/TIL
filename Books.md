@@ -57,4 +57,23 @@ Tips的なもの
 
 # 周辺技術系
 
+### [Amazon Web Servicesクラウドデザインパターン設計ガイド](https://www.amazon.co.jp/dp/B0126HZGP8/ref=cm_sw_r_tw_dp_U_x_Xtt8Eb50DW4D1 )
+
+基礎的なインフラ設計の話
+
+### [達人に学ぶSQL徹底指南書 第2版 初級者で終わりたくないあなたへ](https://www.amazon.co.jp/dp/B07GB4CNKP/ref=cm_sw_r_tw_dp_U_x_5ut8EbAVKFNBJ)
+
+SQL中級者くらいにぴったりの内容。素晴らしい本です。
+
+### [増補改訂版 Java言語で学ぶデザインパターン入門](https://www.amazon.co.jp/dp/B00I8ATHGW/ref=cm_sw_r_tw_dp_U_x_5vt8Eb55E9288)
+
+プログラミング教養的な本。プレームワークで使われているデザインパターンが良くわかります。OSSのコード読むときに知っているといい本。
+
+### [レガシーコード改善ガイド   マイケル・C・フェザーズ](https://www.amazon.co.jp/dp/B01AN97W08/ref=cm_sw_r_tw_dp_U_x_Hwt8EbT7VQDHB )
+
+プログラミングの教養的な本
+
+### [SOFT SKILLS ソフトウェア開発者の人生マニュアル](https://www.amazon.co.jp/dp/4822251551/ref=cm_sw_r_tw_dp_U_x_xxt8Eb1QRD3FJ )
+
+これはプログラマとしての生活についてのマニュアル。興味があれば。
 
