@@ -11,3 +11,4 @@
 
 # UML
 [よく聞くUMLって何？](https://qiita.com/github129/items/80d39f2f043489033076)
+[UMLとは？｜ダイアグラムの種類や用途について解説](https://service.plan-b.co.jp/blog/tech/12404/)
