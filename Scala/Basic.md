@@ -83,4 +83,40 @@ if (point == anotherPoint) {
 
 ```
 
+## Object
+名前を参照してオブジェクトにアクセスすることができます。
 
+```scala
+object IdFactory {
+  private var counter = 0
+  def create(): Int = {
+    counter += 1
+    counter
+  }
+}
+
+val newId: Int = IdFactory.create()
+println(newId) // 1
+val newerId: Int = IdFactory.create()
+println(newerId) // 2
+```
+
+## Trait
+トレイトはいくつかのフィールドとメソッドを含む型です。複数のトレイトを結合することもできます。
+
+```scala
+trait Greeter {
+  def greet(name: String): Unit
+}
+
+```
+
+## Main Method
+メインメソッドはプログラムの始点になります。Javaバーチャルマシーンはmainと名付けられたメインメソッドが必要で、 それは文字列の配列を一つ引数として受け取ります。
+
+```scala
+object Main {
+  def main(args: Array[String]): Unit =
+    println("Hello, Scala developer!")
+}
+```
