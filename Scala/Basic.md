@@ -56,9 +56,31 @@ class Greeter(prefix: String, suffix: String) {
   def greet(name: String): Unit =
     println(prefix + name + suffix)
 }
+
+val greeter = new Greeter("Hello, ", "!")
+greeter.greet("Scala developer") // Hello, Scala developer!
 ```
 Unitはvoidのように戻り値として意味がないことを示します。
 （全てのScalaの式は値を持つ必要があるため、voidと違いUnit型のシングルトンで()と書かれる値がありますが、その値には情報はありません。）
 
+❓**ClassとMethodの用途の違いは？**
+
+## Case Class
+ケースクラスは、new キーワードなしでインスタンス化でき、値で比較されます。
+
+```scala
+case class Point(x: Int, y: Int)
+
+val point = Point(1, 2)
+val anotherPoint = Point(1, 2)
+val yetAnotherPoint = Point(2, 2)
+
+if (point == anotherPoint) {
+  println(point + " と " + anotherPoint + " は同じです。")
+} else {
+  println(point + " と " + anotherPoint + " は異なります。")
+} // Point(1,2) と Point(1,2) は同じです。
+
+```
 
 
