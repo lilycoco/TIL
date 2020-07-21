@@ -1,7 +1,6 @@
 # API
 
-
-``` typescript
+```typescript
 const bookListGetEpic: Epic<Action, RootState> = (action$, state) =>
   action$.ofType(bookListGetAction.types.request)
     .debounceTime(275) // 毎回変更があるたびにレスポンスを返すと処理速度が遅くなるので　debounceTime() を設定する
@@ -14,3 +13,4 @@ const bookListGetEpic: Epic<Action, RootState> = (action$, state) =>
       })
     );
 ```
+

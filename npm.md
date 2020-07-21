@@ -1,5 +1,4 @@
 # npm
 
-npm repo 
-npm info
-npm docs
+npm repo npm info npm docs
+
