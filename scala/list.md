@@ -1,5 +1,15 @@
 # List
 
+
+
+```scala
+head : 先頭
+last : 末尾
+init : 末尾以外
+tail : 先頭以外
+slice : 範囲指定
+```
+
 ## ::, +:
 
 先頭に要素を追加
@@ -71,5 +81,41 @@ BToAMap.map { case (key, value) => (value, key)}
 
 ```scala
 List("a", "a", "a").zipWithIndex.map { case (item, index) => index + "番目の" + item }
+```
+
+## collect
+
+filterとmapを合わせたようなもの。 caseにマッチした結果だけでコレクションが作られる。
+
+```scala
+List(1,2,3).collect{ case 1 => "one"; case 2 => "two" }
+
+res: List(one, two)
+```
+
+```scala
+List[Any]("a",1,"b",2).collect{ case s:String => s }
+
+res: List[String](a, b)
+```
+
+## zip
+
+2つのコレクションの同じ位置の要素をペアにしたコレクションを返す。 長さは短い方に合わせられる。
+
+```scala
+List(1,2,3,4).zip(List('a','b','c'))
+
+res: List((1,'a'), (2,'b'), (3,'c'))
+```
+
+## partition
+
+条件を満たすコレクションと満たさないコレクションを返す。
+
+```scala
+List(1,2,3,4,5).partition(n => n%2==1)
+
+res: (List(1, 3, 5),List(2, 4))
 ```
 
