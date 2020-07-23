@@ -119,3 +119,14 @@ List(1,2,3,4,5).partition(n => n%2==1)
 res: (List(1, 3, 5),List(2, 4))
 ```
 
+```scala
+def findOutlier(integers: List[Int]): Int =
+  integers.partition(_%2 == 0) match {
+    case (List(outlier), _) => outlier
+    case (_, List(outlier)) => outlier
+  }
+  
+findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
+// 11
+```
+
