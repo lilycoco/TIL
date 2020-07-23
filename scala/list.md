@@ -73,19 +73,3 @@ BToAMap.map { case (key, value) => (value, key)}
 List("a", "a", "a").zipWithIndex.map { case (item, index) => index + "番目の" + item }
 ```
 
-## collect
-
-filterとmapを合わせたようなもの。 caseにマッチした結果だけでコレクションが作られる。
-
-```scala
-List(1,2,3).collect{ case 1 => "one"; case 2 => "two" }
-
-res: List(one, two)
-```
-
-```scala
-List[Any]("a",1,"b",2).collect{ case s:String => s }
-
-res: List[String](a, b)
-```
-

@@ -6,6 +6,7 @@
   * [Collection Method](scala/collectionmethod.md)
   * [List](scala/list.md)
   * [String](scala/string.md)
+  * [Int](scala/int.md)
 * [JavaScript](javascript/README.md)
   * [path-parser](javascript/path-parser.md)
   * [ProtType](javascript/prottype.md)
