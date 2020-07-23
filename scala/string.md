@@ -7,6 +7,9 @@
 ```scala
 println( "abc_abc".replaceAll( "[a-z]+", "123" ) );
 // "123_123"
+
+"name=john age=13 year=2001".replaceAll("\\s+","")
+// "name=johnage=13year=2001"
 ```
 
 ## toLowerCase
@@ -34,5 +37,31 @@ println( "abc_abc".replaceAll( "[a-z]+", "123" ) );
 ```scala
 "mac" capitalize
 // Mac
+```
+
+## isLetter
+
+文字かどうかを返す
+
+## asDigit
+
+```scala
+
+'E'.asDigit 
+
+```
+
+## groupBy
+
+同じ値でまとめる
+
+```scala
+val s = Seq("apple", "oranges", "apple", "banana", "apple", "oranges", "oranges")
+s.groupBy(identity).mapValues(_.size)
+
+res: Map(banana -> 1, oranges -> 3, apple -> 3)
+
+s.groupBy(identity).mapValues(_.size)("apple")
+// 3
 ```
 

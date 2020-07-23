@@ -30,3 +30,46 @@ List('a', 'b', 'c', 'd', 'e').slice(1,4)
 List('b', 'c', 'd')
 ```
 
+## mkString
+
+Stringを生成する。
+
+```scala
+	List(1,2,3).mkString("[", "-", "]")
+	
+	[1-2-3]
+```
+
+## map
+
+```scala
+List(2, 7, 1, 8).map(x => x + 1)
+List(2, 7, 1, 8).map(_ + 1)
+
+res: List(3, 8, 2, 9)
+```
+
+```scala
+List(2, 7, 1, 8).map(_ > 2)
+
+res: List(false, true, false, true)
+```
+
+```scala
+List(2, 7, 1, 8).map(c => if (c > 2) 'a' else 'b')
+
+res: List(b, a, b, a)
+```
+
+```scala
+BToAMap.map { case (key, value) => (value, key)}
+```
+
+## zipWithIndex
+
+インデックスを振る
+
+```scala
+List("a", "a", "a").zipWithIndex.map { case (item, index) => index + "番目の" + item }
+```
+
