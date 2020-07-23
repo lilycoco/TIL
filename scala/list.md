@@ -30,13 +30,3 @@ List('a', 'b', 'c', 'd', 'e').slice(1,4)
 List('b', 'c', 'd')
 ```
 
-## mkString
-
-Stringを生成する。
-
-```scala
-	List(1,2,3).mkString("[", "-", "]")
-	
-	[1-2-3]
-```
-

@@ -5,6 +5,7 @@
   * [Basic](scala/basic.md)
   * [Collection Method](scala/collectionmethod.md)
   * [List](scala/list.md)
+  * [String](scala/string.md)
 * [JavaScript](javascript/README.md)
   * [path-parser](javascript/path-parser.md)
   * [ProtType](javascript/prottype.md)
