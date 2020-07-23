@@ -9,3 +9,30 @@ println( "abc_abc".replaceAll( "[a-z]+", "123" ) );
 // "123_123"
 ```
 
+## toLowerCase
+
+小文字変換
+
+```scala
+"WINDOWS".toLowerCase
+// windows
+```
+
+## toUpperCase
+
+大文字変換
+
+```scala
+"Linux".toUpperCase 
+// LINUX
+```
+
+## capitalize
+
+文字列の先頭を大文字にする。先頭が英字でなければそのままの値を返す。
+
+```scala
+"mac" capitalize
+// Mac
+```
+
