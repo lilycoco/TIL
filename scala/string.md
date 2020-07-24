@@ -7,6 +7,8 @@
 ```scala
 "abc_abc".replaceAll("[a-z]+", "123")
 // "123_123"
+"  123  _ 123 ".replaceAll(" {2,}", " ").trim
+// "123 _ 123"
 
 "name=john age=13 year=2001".replaceAll("\\s+","")
 // "name=johnage=13year=2001"
