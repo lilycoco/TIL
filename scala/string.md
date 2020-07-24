@@ -73,3 +73,5 @@ s.groupBy(identity).mapValues(_.size)("apple")
 res: Array[String] = Array(a, b, c)
 ```
 
+
+
