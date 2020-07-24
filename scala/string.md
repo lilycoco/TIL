@@ -65,3 +65,11 @@ s.groupBy(identity).mapValues(_.size)("apple")
 // 3
 ```
 
+## split
+
+```scala
+"a,b,c".split(",")
+
+res: Array[String] = Array(a, b, c)
+```
+
