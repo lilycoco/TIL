@@ -168,3 +168,36 @@ res: List(b1, a2, d3, c4)
 \\ Long typeでリストを作る
 ```
 
+## match
+
+変数 `xs` に代入された列の長さによって異なる文字列を返す
+
+```scala
+val xs = Seq(1)
+xs: Seq[Int] = List(1)
+
+scala> xs match {
+  case Seq() => "no elements"
+  case Seq(x) => s"single element $x"
+  case _ => "two or more elements"
+}
+res: String = single element 1
+```
+
+変数 `c` に代入された値の種類によって異なる文字列を返す
+
+```scala
+scala> val c = 4
+c: Int = 4
+
+scala> c match {
+  case 0 => "なし"
+  case 1 => "ひとつ"
+  case 2 => "ふたつ"
+  case 3 => "みっつ"
+  case k if k > 3 => "たくさん"
+  case _ => "わかりません"
+}
+res: String = たくさん
+```
+

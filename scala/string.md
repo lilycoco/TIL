@@ -76,5 +76,11 @@ s.groupBy(identity).mapValues(_.size)("apple")
 res: Array[String] = Array(a, b, c)
 ```
 
+## 文字列の補完
 
+```scala
+val foo = "bar"
+s"abc $foo def ${ 1+2 }"
+== "abc " + foo + " def " + (1+2)
+```
 
