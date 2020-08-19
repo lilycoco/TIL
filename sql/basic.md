@@ -20,7 +20,7 @@ SELECT title, artist FROM songs;
 `SELECT`文に条件を追加するには`WHERE`句を用います。
 
 ```sql
-SELECT * from songs
+SELECT * FROM songs
 WHERE play_count >= 1000 or play_count <= 500;
 ```
 
