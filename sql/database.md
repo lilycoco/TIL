@@ -89,5 +89,105 @@ WHERE subject_id = (
 );
 ```
 
+## SUM\(\)
+
+外部キーを用いた場合にも`GROUP BY`句を用いてグループ化することができます。
+
+```sql
+SELECT subjects.title as sub, SUM(accounts.amount)
+FROM accounts
+JOIN subjects ON accounts.subject_id = subjects.id
+GROUP BY sub;
+```
+
+* `subjects`テーブルの`title`でグループ化
+* グループ化したデータ群のうち，ひもづいている`accounts`テーブルのデータ数が`3`件**未満**のデータを取得
+
+```sql
+SELECT title FROM subjects
+JOIN accounts ON accounts.subject_id = subjects.id
+GROUP BY subjects.title
+HAVING COUNT(accounts.id) < 3;
+```
+
+## NOT EXISTS
+
+`subjects`テーブルから`accounts`テーブルに紐付いているデータが存在しないデータの`title`を取得
+
+```sql
+SELECT title FROM subjects as sub
+WHERE NOT EXISTS (
+  SELECT 1 FROM accounts
+  WHERE subject_id = sub.id
+);
+```
+
+## BEGIN/COMMIT <a id="section-title"></a>
+
+コードの先頭で`BEGIN`文を使って**トランザクション**を開始し，末尾で`COMMIT`文を使って**変更を適用**する
+
+```sql
+BEGIN;
+INSERT INTO countries (id, name) VALUES (5, 'Germany');
+INSERT INTO users (id, name, country_id) VALUES (7, 'jonas', 5);
+COMMIT;
+```
+
+## BEGIN/ROLLBACK <a id="section-title"></a>
+
+コードの先頭で`BEGIN`文を使って**トランザクション**を開始し，末尾で`ROLLBACK`文を使って**変更を破棄**する
+
+```sql
+BEGIN;
+INSERT INTO countries (id, name) VALUES (5, 'Germany');
+INSERT INTO users (id, name, country_id) VALUES (7, 'jonas', 5);
+ROLLBACK;
+```
+
+## FOREIGN KEY\(\) <a id="section-title"></a>
+
+`users`テーブルを作り直して，`users.country_id`と`countries.id`を関連付ける**外部キー**\(`FOREIGN KEY`\)を追加する
+
+```sql
+CREATE TABLE users (
+  (中略),
+  FOREIGN KEY (country_id) REFERENCES countries (id)
+);
+```
+
+## ON UPDATE RESTRICT <a id="section-title"></a>
+
+参照操作を`RESTRICT`に指定すると，レコード更新時に参照整合性を満たさない操作を行うことを禁じます。`NO ACTION`は，ほとんど`RESTRICT`と同じ挙動をします。
+
+ひとつのトランザクション内において，`RESTIRCT`の場合は影響する文の実行後に整合性の確認が行われますが，`NO ACTION`の場合はトランザクション後まで先延ばしできます。  
+ただし，MySQLにおいては`NO ACTION`は`RESTRICT`と同じになります。
+
+参照操作のデフォルト設定は，MySQLでは`RESTRICT`，SQLiteでは`NO ACITON`となります。
+
+```sql
+PRAGMA foreign_keys = ON;
+
+-- users テーブルを作り直す
+DROP TABLE users;
+CREATE TABLE users (
+ id integer PRIMARY KEY AUTOINCREMENT,
+ name text NOT NULL,
+ country_id integer,
+ FOREIGN KEY (country_id) REFERENCES countries (id)
+  ON UPDATE RESTRICT -- / NO ACTION / SET NULL
+);
+
+-- 動作確認用
+INSERT INTO countries (id, name) VALUES (1, 'Japan');
+INSERT INTO users (id, name, country_id) VALUES (1, 'mitsuru', 1);
+
+-- わざと存在しないcountries.idを参照するよう変更する
+-- エラー"Error: near line 19 FOREIN KEY constraint failed"が表示される
+UPDATE countries SET id = 2 WHERE id = 1;
+SELECT * FROM users LEFT OUTER JOIN countries ON countries.id = users.country_id;
+```
+
+
+
 
 
