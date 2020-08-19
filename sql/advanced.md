@@ -42,6 +42,12 @@ CREATE TABLE users (
 
 参照操作のデフォルト設定は，MySQLでは`RESTRICT`，SQLiteでは`NO ACITON`となります。
 
+`SET NULL`は，参照先のレコードが存在しなくなるような操作が行われた際に，参照するカラムの値を`NULL`に変更します。  
+`NOT NULL`制約が付与されている場合はエラーとなります。
+
+`ON UPDATE CASCADE`は，参照先の値が更新されたら，参照元の値も更新されます。  
+`ON UPDATE DELETE`は，参照先のレコードが削除されたら，参照元のレコードも削除されます。
+
 ```sql
 PRAGMA foreign_keys = ON;
 
@@ -52,7 +58,7 @@ CREATE TABLE users (
  name text NOT NULL,
  country_id integer,
  FOREIGN KEY (country_id) REFERENCES countries (id)
-  ON UPDATE RESTRICT -- / NO ACTION / SET NULL
+  ON UPDATE RESTRICT -- / NO ACTION / SET NULL / CASCADE / ON DELETE SET NULL
 );
 
 -- 動作確認用
