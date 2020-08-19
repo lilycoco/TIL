@@ -4,6 +4,7 @@
 * [SQL](sql/README.md)
   * [Basic](sql/basic.md)
   * [Database](sql/database.md)
+  * [Advanced](sql/advanced.md)
 * [Scala](scala/README.md)
   * [Basic](scala/basic.md)
   * [Collection Method](scala/collectionmethod.md)
