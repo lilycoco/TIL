@@ -1,6 +1,8 @@
 # Table of contents
 
 * [TIL](README.md)
+* [SQL](sql/README.md)
+  * [Basic](sql/basic.md)
 * [Scala](scala/README.md)
   * [Basic](scala/basic.md)
   * [Collection Method](scala/collectionmethod.md)
