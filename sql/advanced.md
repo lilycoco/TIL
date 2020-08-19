@@ -1,5 +1,106 @@
 # Advanced
 
+## JOIN
+
+下記のように`JOIN`句を用いて`users`テーブルと`countries`テーブルを結合します。`WHERE`句をあわせて指定することで`countries.name`が`'USA'`のデータのみを抽出します。
+
+```sql
+SELECT users.name as user_name, countries.name as country_name
+FROM users
+JOIN countries ON users.country_id = countries.id
+WHERE countries.name = 'USA';
+```
+
+## 複数テーブルのJOIN
+
+`JOIN`句を複数回使うことで，3つ以上のテーブルを結合することができます。
+
+```sql
+SELECT *
+FROM a
+JOIN b ON b.id = a.b_id
+JOIN c ON c.id = a.c_id;
+```
+
+## FROM
+
+`FROM`句でサブクエリを使うことで，サブクエリの取得結果を一時的なテーブルとして扱うことができます。  
+サブクエリの取得結果には別名を付ける必要がありますので，注意してください。
+
+```sql
+SELECT *
+FROM (
+ SELECT u.name as username, c.name as country_name
+ FROM users as u
+ JOIN countries as c ON c.id = u.country_id
+) as sub
+WHERE country_name = 'Japan';
+```
+
+## 取得カラムのサブクエリ <a id="section-title"></a>
+
+```sql
+SELECT
+ id, name,
+ (
+  SELECT COUNT(*)
+  FROM users 
+  WHERE country_id = c.id
+ ) as user_count
+ FROM countries as c;
+```
+
+## WHERE X = サブクエリ <a id="section-title"></a>
+
+`WHERE`句と一緒に使うことで，サブクエリの取得結果を使って絞り込みができます。
+
+```sql
+SELECT *
+FROM users
+WHERE country_id = (
+  SELECT id
+  FROM countries
+  WHERE name = 'Japan'
+);
+```
+
+## \# COUNT\(\)
+
+```sql
+SELECT c.name as country_name, (
+  SELECT COUNT(u.id)
+  FROM users as u
+  WHERE u.country_id = c.id
+) as users_count
+FROM countries as c;
+```
+
+## WHERE EXISTS <a id="section-title"></a>
+
+`EXISTS`はサブクエリの取得結果が1件以上存在するかのみを見るため，サブクエリで取得する値として`1`を指定することがあります。  
+`0`や`*`，`c.id`，`NULL`でも結果は変わりません。
+
+```sql
+SELECT *
+FROM users as u
+WHERE EXISTS (
+  SELECT 1
+  FROM countries as c
+  WHERE c.id = u.country_id AND c.name = 'Japan'
+);
+```
+
+## WHERE X in  <a id="section-title"></a>
+
+`in`とサブクエリを一緒に使うことで，指定したカラムの値がサブクエリの取得結果に含まれるデータを取得することができます。
+
+```sql
+SELECT * FROM テーブル名
+WHERE カラム名 in (
+  SELECT文のサブクエリ
+);
+```
+
 ## BEGIN/COMMIT <a id="section-title"></a>
 
 コードの先頭で`BEGIN`文を使って**トランザクション**を開始し，末尾で`COMMIT`文を使って**変更を適用**する
