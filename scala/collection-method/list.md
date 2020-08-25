@@ -1,7 +1,5 @@
 # List
 
-
-
 ```scala
 head : 先頭
 last : 末尾
@@ -45,9 +43,9 @@ List('b', 'c', 'd')
 Stringを生成する。
 
 ```scala
-	List(1,2,3).mkString("[", "-", "]")
-	
-	[1-2-3]
+    List(1,2,3).mkString("[", "-", "]")
+
+    [1-2-3]
 ```
 
 ## map
@@ -125,7 +123,7 @@ def findOutlier(integers: List[Int]): Int =
     case (List(outlier), _) => outlier
     case (_, List(outlier)) => outlier
   }
-  
+
 findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
 // 11
 ```

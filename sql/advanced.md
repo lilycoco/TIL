@@ -90,7 +90,7 @@ WHERE EXISTS (
 );
 ```
 
-## WHERE X in  <a id="section-title"></a>
+## WHERE X in <a id="section-title"></a>
 
 `in`とサブクエリを一緒に使うことで，指定したカラムの値がサブクエリの取得結果に含まれるデータを取得することができます。
 
@@ -171,8 +171,4 @@ INSERT INTO users (id, name, country_id) VALUES (1, 'mitsuru', 1);
 UPDATE countries SET id = 2 WHERE id = 1;
 SELECT * FROM users LEFT OUTER JOIN countries ON countries.id = users.country_id;
 ```
-
-
-
-
 

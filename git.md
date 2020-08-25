@@ -54,7 +54,7 @@ git pull upstream master
 
 ```text
 git rebert [blunch]
-git push -f 
+git push -f
 ```
 
 ### GithubにPushしたコミットを削除する

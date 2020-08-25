@@ -49,9 +49,7 @@
 ## asDigit
 
 ```scala
-
-'E'.asDigit 
-
+'E'.asDigit
 ```
 
 ## groupBy

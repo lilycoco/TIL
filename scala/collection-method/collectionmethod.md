@@ -1,4 +1,4 @@
-# Collection Method
+# Seq
 
 ## transpose
 

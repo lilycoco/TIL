@@ -6,7 +6,7 @@
 整数型は`integer`で表し，主キーは`primary key`で表します。`primary key`制約を付与すると，データ挿入時にそのカラムの値を省略した際に，自動的に重複しない値\(連番\)が割り振られます。
 
 ```sql
-	CREATE TABLE accounts (
+    CREATE TABLE accounts (
    id integer primary key,
    subject varchar(64),
    summary text,
@@ -121,6 +121,4 @@ WHERE NOT EXISTS (
   WHERE subject_id = sub.id
 );
 ```
-
-
 
