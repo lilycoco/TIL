@@ -11,6 +11,7 @@
   * [List](scala/list.md)
   * [String](scala/string.md)
   * [Int](scala/int.md)
+  * [Play framework](scala/play-framework.md)
 * [JavaScript](javascript/README.md)
   * [path-parser](javascript/path-parser.md)
   * [ProtType](javascript/prottype.md)
