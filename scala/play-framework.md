@@ -15,37 +15,34 @@
 
 [Anatomy of a Play application](https://www.playframework.com/documentation/2.8.x/Anatomy)
 
-### Routes
-
-`/conf/routes`
-
-### Controllers
-
-`/app/controllers/TodoCoutroller.scala`
-
-### Views
-
-`/app/views/list.scala.html`
-
-### Services
-
-`/app/services/Todo.scala`
-
-### Build
-
-`/build.sbt`
-
-Build用のライブラリ
-
-### Database
-
-`/conf/application.conf`
-
-データベースの設定
-
-### SQL
-
-`/conf/evolutions/default/1.sql`
+```text
+├── app アプリケーションのソースコード
+│   ├── controllers アプリケーションのコントローラ
+│   ├── views テンプレート
+│   └── services (option)
+├── build.gradle
+├── build.sbt アプリケーションのビルドスクリプト, Build用のライブラリ設定
+├── conf アプリケーションの設定ファイル
+│   ├── application.conf メイン設定ファイル, データベースの設定
+│   ├── logback.xml ログ出力設定ファイル
+│   ├── messages 国際化対応用言語ファイル
+│   ├── routes ルート定義
+│   └── evolutions evolutions設定　(option)
+│       └── default 
+│           └── 1.sql SQL
+├── gradle
+├── gradlew
+├── gradlew.bat
+├── project sbt 設定ファイル群
+│   ├── build.properties sbt プロジェクトの目印
+│   ├── plugins.sbt Play 自身の定義を含む sbt プラグイン
+│   ├── project
+│   ├── scaffold.sbt scaffolding 用の sbt プラグイン使用時に使用
+│   └── target
+├── public 公開アセット
+├── target ビルド成果物
+└── test 単体、および機能テスト用のソースフォルダ
+```
 
 ## Database
 
