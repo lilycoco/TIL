@@ -1,3 +1,9 @@
+---
+description: >-
+  scala のビルドツールのこと
+  scalaのコードだけでもscalacコマンドを使用したりすることでアプリケーションを生成出来るが、sbtを使うとモジュールやバージョン管理がしやすい
+---
+
 # sbt
 
 ## Basic Command
