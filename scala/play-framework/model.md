@@ -22,9 +22,15 @@ SQLの実行/結果解析をサポートする、データベースアクセス�
 
 {% embed url="http://skinny-framework.org/documentation/orm.html" %}
 
+{% hint style="info" %}
+ORMとは
+
 1. データベースからデータを取得する
 2. 取得したデータをオブジェクト化する
 3. データの更新・変更などをデータベースに格納する
+
+[オブジェクト関係マッピング](https://qiita.com/yk-nakamura/items/acd071f16cda844579b9)
+{% endhint %}
 
 Skinny-ORMによってJOINが簡単になる
 
