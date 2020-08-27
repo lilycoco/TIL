@@ -6,7 +6,7 @@
 
 ### evolutions
 
-{% embed url="https://www.playframework.com/documentation/ja/2.1.x/Evolutions" %}
+{% embed url="https://www.playframework.com/documentation/2.8.x/Evolutions\#Managing-database-evolutions" %}
 
 DBマイグレーションツール
 
