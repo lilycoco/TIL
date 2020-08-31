@@ -2,6 +2,23 @@
 
 {% embed url="https://www.playframework.com/documentation/2.7.x/ScalaDatabase" %}
 
+## 　Library dependencies
+
+{% embed url="https://www.playframework.com/documentation/ja/2.4.x/SBTDependencies" %}
+
+`build.sbt` 
+
+```text
+libraryDependencies ++= Seq(
+  "org.apache.derby" % "derby" % "10.11.1.1",
+  "org.hibernate" % "hibernate-entitymanager" % "4.3.9.Final"
+)
+
+libraryDependencies += "org.apache.derby" % "derby" % "10.11.1.1" % "test"
+```
+
+\(`group`, `artifact`, `revision` , `configuration`\) を定義している
+
 ## Database
 
 ### evolutions

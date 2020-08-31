@@ -17,6 +17,8 @@
     * [Model](scala/play-framework/model.md)
     * [View](scala/play-framework/view.md)
     * [Controller](scala/play-framework/controller.md)
+    * [Deploy](scala/play-framework/deploy.md)
+    * [Test](scala/play-framework/test.md)
 * [JavaScript](javascript/README.md)
   * [path-parser](javascript/path-parser.md)
   * [ProtType](javascript/prottype.md)
