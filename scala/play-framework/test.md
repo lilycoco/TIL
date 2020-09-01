@@ -10,6 +10,8 @@ description: Test on Play framework with ScalaTest
 
 {% embed url="https://qiita.com/verdoyant/items/e8d81e80268b714fdfbc" %}
 
+{% embed url="https://scala-text.github.io/scala\_text/test.html" %}
+
 
 
 ## Test command
