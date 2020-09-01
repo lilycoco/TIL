@@ -92,7 +92,7 @@ If you only do normal QA, no need to define your own test classes and use PlaySp
 
 インスタンスを作成しなくても、偽装したインスタンスを作成して引数で渡すことでテストの依存する部分が減らせる。
 
-データベースやAPIに依存するものをテストする際に有効。 mockによってAPIやデータベースがちゃんと動いているかという懸念点をなくし、純粋な機能テストが出来る。
+データベースやAPIに依存するものをテストする際に有効で、mockによってAPIやデータベースがちゃんと動いているかという懸念点をなくし、純粋な機能テストが出来る。
 
 {% tabs %}
 {% tab title="Controller.scala" %}
