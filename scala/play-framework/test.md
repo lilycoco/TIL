@@ -52,9 +52,26 @@ test:console
 
 ### FunSuite
 
-```text
-test(""){ assert()}
+{% code title="SetSuite.scala" %}
+```scala
+import org.scalatest._
+import org.scalatestplus.play._  
+
+class SetSuite extends FunSuite {
+
+  test("An empty Set should have size 0") {
+    assert(Set.empty.size == 0)
+  }
+
+  test("Invoking head on an empty Set should produce NoSuchElementException") {
+    assertThrows[NoSuchElementException] {
+      Set.empty.head
+    }
+  }
+  
+}
 ```
+{% endcode %}
 
 ###  PlaySpec, WordSpec, FlatSpec
 
@@ -94,8 +111,7 @@ If you only do normal QA, no need to define your own test classes and use PlaySp
 
 データベースやAPIに依存するものをテストする際に有効で、mockによってAPIやデータベースがちゃんと動いているかという懸念点をなくし、純粋な機能テストが出来る。
 
-{% tabs %}
-{% tab title="Controller.scala" %}
+{% code title="Controller.scala" %}
 ```scala
 package main
 
@@ -105,11 +121,9 @@ class Controller(data:Data) {
    def getMessage(message:String):String = message+"Controlled"
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="ControllerSpec.scala" %}
+{% code title="ControllerSpec.scala" %}
 ```scala
 import org.scalatest._
 import org.scalatestplus.play._
@@ -128,6 +142,5 @@ class ControllerSpec extends PlaySpec with Mockito {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
