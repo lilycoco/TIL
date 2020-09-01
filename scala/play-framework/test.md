@@ -2,40 +2,45 @@
 
 {% embed url="https://www.playframework.com/documentation/2.8.x/ScalaTestingWithScalaTest" %}
 
-* To run all tests, run `test`.
-* To run only one test class, run `test-only` followed by the name of the class, i.e., `test-only my.namespace.MySpec`.
-* To run only the tests that have failed, run `test-quick`.
-* To run tests continually, run a command with a tilde in front, i.e. `~test-quick`.
-* To access test helpers such as `FakeRequest` in console, run `test:console`.
+{% embed url="https://www.scalatest.org/user\_guide/selecting\_a\_style" %}
 
+## Test command
 
-
-In _ScalaTest + Play_, you define test classes by extending the [`PlaySpec`](https://www.playframework.com/documentation/2.8.x/api/scala/org/scalatestplus/play/PlaySpec.html) trait. Here’s an example:
+### To run all tests
 
 ```text
-import org.scalatestplus.play._
-
-import scala.collection.mutable
-
-class StackSpec extends PlaySpec {
-
-  "A Stack" must {
-    "pop values in last-in-first-out order" in {
-      val stack = new mutable.Stack[Int]
-      stack.push(1)
-      stack.push(2)
-      stack.pop() mustBe 2
-      stack.pop() mustBe 1
-    }
-    "throw NoSuchElementException if an empty stack is popped" in {
-      val emptyStack = new mutable.Stack[Int]
-      a[NoSuchElementException] must be thrownBy {
-        emptyStack.pop()
-      }
-    }
-  }
-}
+sbt run
 ```
+
+### To run only one test class
+
+```scala
+test-only 
+
+// followed by the name of the class, i.e., 
+test-only my.namespace.MySpec.
+```
+
+### To run only the tests that have failed
+
+```text
+test-quick
+```
+
+### To run tests continually
+
+```scala
+~test-quick
+// run a command with a tilde in front, i.e. .
+```
+
+### To access test helpers such as `FakeRequest` in console
+
+```scala
+test:console
+```
+
+### 
 
 You can alternatively [define your own base classes](http://scalatest.org/user_guide/defining_base_classes) instead of using `PlaySpec`.
 
@@ -45,27 +50,34 @@ Should define your own test classes If you have multiple varieties of tests \(ex
 If you only do normal QA, no need to define your own test classes and use PlaySpec
 {% endhint %}
 
-you might create a `UnitSpec` class \(not trait, for speedier compiles\) for unit tests that looks like:
+## Testing Style
+
+### FunSuite
 
 ```text
-package com.mycompany.myproject
-
-import org.scalatest._
-import matchers._
-
-abstract class UnitSpec extends AnyFlatSpec with should.Matchers with
-  OptionValues with Inside with Inspectors
+test(""){ assert()}
 ```
 
-You can then write unit tests for your project using the custom base class, like this:
+###  PlaySpec, WordSpec, FlatSpec
 
-```text
-package com.mycompany.myproject
+一つのメソッドの別の条件でのテストが分かりやすく書ける  
+WordSpecで使える機能はPlaySpecでも使える\(PlaySpecはWordSpecをextendsしたもの\)
 
-import org.scalatest._
+```scala
+class SetSuite extends PlaySpec {
 
-class MySpec extends UnitSpec {
-  // Your tests here
+  "An empty Set should have size 0" in {
+    assert(Hoge.hode() == 1)
+  }
+  
+  "An empty Set should have size 0" in {
+    Set.empty.size mustBe 0
+  }
+  "Invoking head on an empty Set should produce NoSuchElementException"  in {
+    a [NoSuchElementException] must be thrownBy {
+      Set.empty.head
+    }
+  }
 }
 ```
 
