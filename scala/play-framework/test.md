@@ -1,8 +1,16 @@
+---
+description: Test on Play framework with ScalaTest
+---
+
 # Test
+
+{% embed url="https://www.scalatest.org/user\_guide/selecting\_a\_style" %}
 
 {% embed url="https://www.playframework.com/documentation/2.8.x/ScalaTestingWithScalaTest" %}
 
-{% embed url="https://www.scalatest.org/user\_guide/selecting\_a\_style" %}
+{% embed url="https://qiita.com/verdoyant/items/e8d81e80268b714fdfbc" %}
+
+
 
 ## Test command
 
@@ -73,6 +81,7 @@ class SetSuite extends PlaySpec {
   "An empty Set should have size 0" in {
     Set.empty.size mustBe 0
   }
+  
   "Invoking head on an empty Set should produce NoSuchElementException"  in {
     a [NoSuchElementException] must be thrownBy {
       Set.empty.head
