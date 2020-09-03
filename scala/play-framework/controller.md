@@ -14,9 +14,13 @@ val echo = Action { request =>
 
 ## Dependency Injection
 
-{% embed url="https://qiita.com/hshimo/items/1136087e1c6e5c5b0d9f" %}
-
 {% embed url="https://qiita.com/pab\_tech/items/1c0bdbc8a61949891f1f" %}
+
+## CSRF
+
+{% embed url="https://www.playframework.com/documentation/2.8.x/ScalaCsrf" %}
+
+攻撃者が被害者のブラウザに被害者のセッションを使ったリクエストを行わせるように仕向ける、セキュリティ上の脆弱性のこと
 
 
 
