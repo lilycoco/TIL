@@ -20,6 +20,10 @@ val echo = Action { request =>
 
 {% embed url="https://www.playframework.com/documentation/2.8.x/ScalaCsrf" %}
 
+{% embed url="http://lab.astamuse.co.jp/entry/2018/03/21/114500" %}
+
+
+
 攻撃者が被害者のブラウザに被害者のセッションを使ったリクエストを行わせるように仕向ける、セキュリティ上の脆弱性のこと
 
 
