@@ -22,9 +22,32 @@ val echo = Action { request =>
 
 {% embed url="http://lab.astamuse.co.jp/entry/2018/03/21/114500" %}
 
+{% embed url="https://qiita.com/agoetc/items/c6068443d98de5180efd" %}
+
 
 
 攻撃者が被害者のブラウザに被害者のセッションを使ったリクエストを行わせるように仕向ける、セキュリティ上の脆弱性のこと
+
+PlayFrameworkの初期設定ではCSRF対策が必須で、view内でフォームを使用する場合、トークンを明示的に渡さなくてはいけません。  
+また、CSRFを使用するときはRequestHeaderが必要
+
+```scala
+@import helper._
+@()(implicit requestHeader: RequestHeader)
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+
+@form(CSRF(routes.HomeController.post())) {
+    <div>
+        <label for="name">なまえ</label>
+        <input type="text" id="name" name="name" placeholder="なまえ">
+    </div>
+    <div class="button">
+        <button type="button">送信</button>
+    </div>
+}
+```
 
 
 
