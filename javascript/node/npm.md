@@ -12,3 +12,11 @@
 }
 ```
 
+## Command
+
+`npm repo` 
+
+`npm info` 
+
+`npm docs`
+

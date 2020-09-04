@@ -127,3 +127,19 @@ git reset --hard HEAD@{1}
 git push origin my-master:master
 ```
 
+`git diff` 
+
+`git log` 
+
+`git reset HEAD^` 
+
+`git status` 
+
+`git stash save -u` 
+
+`git stash show` 
+
+`git stash list`
+
+`git stash drop`
+
