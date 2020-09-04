@@ -2,6 +2,7 @@
 
 * [TIL](README.md)
 * [Books](books.md)
+* [使ってみたい](ttemitai.md)
 * [Git](git.md)
 * [Web](web/README.md)
   * [Basic](web/basic.md)
@@ -50,7 +51,6 @@
     * [Deploy](scala/play-framework/deploy.md)
     * [Test](scala/play-framework/test.md)
 * [React](react/README.md)
-  * [使ってみたい](react/ttemitai.md)
   * [Redux](react/redux.md)
   * [Hooks](react/hooks.md)
   * [styled-component 💅](react/styled-component.md)
