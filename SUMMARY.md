@@ -64,6 +64,7 @@
 * [Vue](vue/README.md)
   * [Nuxt](vue/nuxt.md)
 * [JavaScript](javascript/README.md)
+  * [event hadler](javascript/event-hadler.md)
   * [path-parser](javascript/path-parser.md)
   * [ProtType](javascript/prottype.md)
   * [Node](javascript/node/README.md)
