@@ -115,6 +115,10 @@ trait Greeter {
 }
 ```
 
+{% embed url="https://docs.scala-lang.org/ja/tour/mixin-class-composition.html" %}
+
+
+
 ## Main Method
 
 メインメソッドはプログラムの始点になります。Javaバーチャルマシーンはmainと名付けられたメインメソッドが必要で、 それは文字列の配列を一つ引数として受け取ります。
