@@ -8,6 +8,7 @@
 * [Web](web/README.md)
   * [Basic](web/basic.md)
 * [Services](services/README.md)
+  * [Prettier, eslint](services/prettier-eslint.md)
   * [Linux](services/linux.md)
   * [yarn](services/yarn.md)
   * [Jest](services/jest.md)
