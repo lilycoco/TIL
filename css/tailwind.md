@@ -2,9 +2,11 @@
 
 {% embed url="https://tailwindcss.com/" %}
 
-## Components Example
+## Cheat Sheet
 
 {% embed url="https://nerdcave.com/tailwind-cheat-sheet" %}
+
+## Components Example
 
 {% embed url="https://tailwindcomponents.com/" %}
 
