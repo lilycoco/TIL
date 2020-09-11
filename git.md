@@ -42,6 +42,12 @@
 
 `git revert commitNo`
 
+### タグの設定
+
+{% embed url="https://qiita.com/growsic/items/ed67e03fda5ab7ef9d08" %}
+
+
+
 ### Fork して push
 
 ```text
