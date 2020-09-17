@@ -16,5 +16,9 @@
 
 {% embed url="https://developer.mozilla.org/ja/docs/Web/API/Document/querySelectorAll" %}
 
+## noopner npreferrer
+
+{% embed url="https://www.marorika.com/entry/rel-noopener-noreferrer" %}
+
 
 
