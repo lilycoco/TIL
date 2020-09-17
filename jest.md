@@ -1,7 +1,5 @@
 # Jest
 
-npm run test --spec src/shared/services/url.spec.ts
-
 ## SnapShot
 
 {% embed url="https://jestjs.io/docs/ja/snapshot-testing" %}
