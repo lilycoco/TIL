@@ -16,5 +16,9 @@
 
 {% embed url="https://github.com/typescript-cheatsheets/react" %}
 
+## Other
+
+{% embed url="https://note.com/retoruto\_carry/n/n76e823abc0e5" %}
+
 
 
