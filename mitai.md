@@ -20,5 +20,9 @@
 
 {% embed url="https://note.com/retoruto\_carry/n/n76e823abc0e5" %}
 
+{% embed url="https://www.buildinsider.net/web/chromedevtools/01\#page-4" %}
+
+{% embed url="http://mugi1.hateblo.jp/entry/2018/12/11/215808" %}
+
 
 
