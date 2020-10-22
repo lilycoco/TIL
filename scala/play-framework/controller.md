@@ -59,5 +59,5 @@ PlayFrameworkの初期設定ではCSRF対策が必須で、view内でフォー�
 
 **InjectedController:** `ControllerComponent`を`setControllerComponents`で設定されるControllerで密結合になるから利用に注意したほうが良い。テストがしづらいと言うこと。 
 
-**結論からすると特殊な事情がない限りAbstractControllerを使うのがベター**
+**結論、特殊な事情がない限りAbstractControllerを使うのがベター**
 
