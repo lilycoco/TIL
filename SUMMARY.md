@@ -72,7 +72,6 @@
   * [Usefull Tools](javascript/usefull-tools/README.md)
     * [lodash](javascript/usefull-tools/lodash.md)
   * [Technics](javascript/technics.md)
-  * [Event Handler](javascript/event-hadler.md)
   * [ProtType](javascript/prottype.md)
   * [Node](javascript/node/README.md)
     * [nvm](javascript/node/npm-1.md)

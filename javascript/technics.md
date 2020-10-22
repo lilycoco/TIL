@@ -12,5 +12,9 @@
 
 {% embed url="https://postd.cc/how-does-a-rdb-work-1/" %}
 
+## Event Handler
+
+{% embed url="https://analogstd.com/pc/javascript-eventhandler-addeventlistener/" %}
+
 
 
