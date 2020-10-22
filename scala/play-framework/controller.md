@@ -49,5 +49,15 @@ PlayFrameworkの初期設定ではCSRF対策が必須で、view内でフォー�
 }
 ```
 
+## Controller
 
+元々は`Controller`と言うクラスしかなかったが、2.6で`Controller`がdeprecateして、`BaseController`・`AbstractController`・`InjectedController`の3つに生まれ変わった。
+
+**BaseController:**  `AbstractController`と`InjectedController`の親で、カスタマイズ性の高いController。ただ、`BaseController`には宣言だけされた`ControllerComponents`が存在して、もし利用する場合はこの`ControllerComponents`の実装が強制される。まあだからこそカスタマイズ性があるのだと思うけど。 
+
+**AbstractController:** `ControllerComponents`をコンストラクタ引数として受け取れるからDIしてしまえばそこを気にすることなく実装ができる。 とは言え、どちらにせよDIによって`ControllerComponent`の件は解消できるから、今回のPRのような場合は差がないように見えるんだね。 対して、
+
+**InjectedController:** `ControllerComponent`を`setControllerComponents`で設定されるControllerで密結合になるから利用に注意したほうが良い。テストしづらいってことだね。 
+
+**結論からすると特殊な事情がない限りAbstractControllerを使うのがベター**
 

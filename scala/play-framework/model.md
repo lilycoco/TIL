@@ -41,6 +41,10 @@ ORMとは
 [オブジェクト関係マッピング](https://qiita.com/yk-nakamura/items/acd071f16cda844579b9)
 {% endhint %}
 
+> Play is non-opinionated about database access, and integrates with many object relational mapping \(ORM\) layers. It supports [Anorm](https://www.playframework.com/documentation/2.8.x/Anorm), [Slick](https://www.playframework.com/documentation/2.8.x/PlaySlick), and [JPA](https://www.playframework.com/documentation/2.8.x/JavaJPA) out of the box, but many customers use NoSQL or other ORMs.
+
+[https://www.playframework.com/documentation/2.8.x/Introduction\#What-is-Play?](https://www.playframework.com/documentation/2.8.x/Introduction#What-is-Play?)
+
 ### Anorm
 
 {% embed url="https://playframework.github.io/anorm/" %}
