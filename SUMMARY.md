@@ -71,7 +71,7 @@
 * [JavaScript](javascript/README.md)
   * [Usefull Tools](javascript/usefull-tools/README.md)
     * [lodash](javascript/usefull-tools/lodash.md)
-  * [Technics](javascript/technics.md)
+  * [Basic](javascript/technics.md)
   * [ProtType](javascript/prottype.md)
   * [Node](javascript/node/README.md)
     * [nvm](javascript/node/npm-1.md)

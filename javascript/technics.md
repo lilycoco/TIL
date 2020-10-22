@@ -1,4 +1,4 @@
-# Technics
+# Basic
 
 ## Shallow Copy, Deep Copy
 
