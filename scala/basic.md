@@ -39,6 +39,8 @@ println(addOne(1)) // 2
 
 ## Method
 
+{% embed url="http://www.ne.jp/asahi/hishidama/home/tech/scala/def.html" %}
+
 メソッド本体にある最後の式はメソッドの戻り値になります。\(Scalaにはreturnキーワードはありますが、めったに使われません。\)
 
 ```scala
@@ -50,6 +52,21 @@ def getSquareString(input: Double): String = {
   square.toString
 }
 println(getSquareString(2.5)) // 6.25
+```
+
+```scala
+def myloop(n: Int)(f: => Unit) = {
+      var m = n
+      while (m > 0) {
+       f
+        m -= 1
+      }
+    }
+     
+// myloop: (n: Int)(f: => Unit)Unit
+
+myloop(3){ println("abc") } 
+// 関数（メソッド）を呼び出す際、引数が1個しかない引数リストでは、丸括弧を省略できる。
 ```
 
 ## Class
