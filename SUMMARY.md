@@ -68,6 +68,7 @@
   * [http-proxy-middleware](middleware/http-proxy-middleware.md)
 * [Debug](debug.md)
 * [React](react/README.md)
+  * [React DnD](react/react-dnd.md)
   * [Hooks](react/hooks.md)
   * [styled-component 💅](react/styled-component.md)
   * [redux-form](react/redux-form.md)
