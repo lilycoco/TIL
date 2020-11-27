@@ -1,3 +1,7 @@
+---
+description: Yup is a JavaScript schema builder for value parsing and validation.
+---
+
 # yup
 
 {% embed url="https://github.com/jquense/yup" %}
