@@ -2,6 +2,8 @@
 
 ## Type Guard
 
+型の条件分岐が出来る
+
 {% embed url="https://basarat.gitbook.io/typescript/type-system/typeguard" %}
 
 {% embed url="https://www.typescriptlang.org/docs/handbook/advanced-types.html" %}
