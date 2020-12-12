@@ -56,9 +56,14 @@ ControllerやServiceなどのRepositoryを利用する側としてはこのイ�
 MySQLからPostgreSQLにします！とか、一元管理していたDBを分割します！とか、なったとしてもRepositoryのみ修正すれば良いということになるわけですね👽  
 要件変更が入ってもビジネスロジックだけ書き換えるのも用意だったり👽
 
-ここらへんの記事が色々説明してくれてますね✨  
-[https://qiita.com/mikesorae/items/ff8192fb9cf106262dbf](https://qiita.com/mikesorae/items/ff8192fb9cf106262dbf)  
-[https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design](https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design)👀 1  
+ここらへんの記事が色々説明してくれてますね✨
+
+{% embed url="https://qiita.com/mikesorae/items/ff8192fb9cf106262dbf" %}
+
+{% embed url="https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design" %}
+
+  
+  
 
 
 ## repositories/impl
