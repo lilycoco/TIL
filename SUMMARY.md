@@ -6,6 +6,7 @@
 * [読みたい](mitai.md)
 * [Scala](scala/README.md)
   * [Basic](scala/basic.md)
+  * [Repository](scala/repository.md)
   * [Collection Method](scala/collection-method/README.md)
     * [Int](scala/collection-method/int.md)
     * [String](scala/collection-method/string.md)

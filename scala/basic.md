@@ -73,8 +73,7 @@ myloop(3){ println("abc") }
 
 ```scala
 class Greeter(prefix: String, suffix: String) {
-  def greet(name: String): Unit =
-    println(prefix + name + suffix)
+  def greet(name: String): Unit println(prefix + name + suffix)
 }
 
 val greeter = new Greeter("Hello, ", "!")
