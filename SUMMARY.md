@@ -96,10 +96,10 @@
   * [Laradock](php/laradock.md)
 * [Work](work/README.md)
   * [frontend](work/frontend.md)
+* [Tarminal](tarminal.md)
 * [DesignDocumentation](designdocumentation/README.md)
   * [Untitled](designdocumentation/untitled.md)
   * [Tetris](designdocumentation/tetris.md)
 * [ServiseCombinations](servisecombinations/README.md)
-  * [Tarminal](servisecombinations/tarminal.md)
   * [Develop App using Node.js, TypeScript, MongoDB](servisecombinations/node-ts-mongodb.md)
 
