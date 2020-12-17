@@ -13,6 +13,7 @@
     * [Seq](scala/collection-method/collectionmethod.md)
   * [sbt](scala/sbt.md)
   * [Play framework](scala/play-framework/README.md)
+    * [Docker](scala/play-framework/docker.md)
     * [Directory](scala/play-framework/repository.md)
     * [Model](scala/play-framework/model.md)
     * [View](scala/play-framework/view.md)

@@ -98,7 +98,21 @@ class HealthCheckRepositoryImpl extends AbstractRepository with HealthCheckRepos
 
 振る舞い定義。`HealthCheckRepositoryImpl`で実現をして、DIする
 
-`trait`で振る舞いの定義だけで何の振る舞いも持っていないよね👀  
+```scala
+package repositories
+
+import com.google.inject.ImplementedBy
+import repositories.impl.HealthCheckRepositoryImpl
+
+@ImplementedBy(classOf[HealthCheckRepositoryImpl])
+trait HealthCheckRepository extends Repository {
+  def canConnect: Boolean
+}ca
+```
+
+`@ImplementedBy(classOf[HealthCheckRepositoryImpl])`はどのクラスにDIするかというペアリングのような設定記述になります！
+
+`canConnect`は振る舞いの定義だけで何の振る舞いも持っていないよね👀  
 `HealthCheck`っていう要件に対する振る舞いだけ、つまりリモコンの上っ面みたいなもんで、これがどう実装されているかは隠蔽されているわけです👽
 
 ### HealthCheckRepositoryImpl
