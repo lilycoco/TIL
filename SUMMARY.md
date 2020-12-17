@@ -2,6 +2,8 @@
 
 * [TIL](README.md)
 * [Books](books.md)
+* [Blog](blog/README.md)
+  * [未経験からエンジニアとして働いてみて1年経った今思うこと](blog/karaenjiniatoshiteitemite1ttaukoto.md)
 * [使ってみたい](ttemitai.md)
 * [読みたい](mitai.md)
 * [Docker](docker/README.md)
