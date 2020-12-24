@@ -4,6 +4,9 @@
 
 ## react-redux
 
+> Official React bindings for [Redux](https://github.com/reduxjs/redux).  
+> Performant and flexible.
+
 {% embed url="https://github.com/reduxjs/react-redux" %}
 
 ## rxjs
@@ -16,7 +19,7 @@ Observerパターンを使った非同期とイベントのためのライブラ
 
 ## typesafe-actions
 
-
+型安全なActionや非同期Action、Reducerを簡単に作成することが出来る。
 
 > * Easily create completely typesafe [Actions](https://github.com/piotrwitek/typesafe-actions#action-creators-api) or even [Async Actions](https://github.com/piotrwitek/typesafe-actions#createasyncaction)
 > * No boilerplate and completely typesafe [Reducers](https://github.com/piotrwitek/typesafe-actions#reducer-creators-api)
@@ -24,7 +27,13 @@ Observerパターンを使った非同期とイベントのためのライブラ
 
 {% embed url="https://github.com/piotrwitek/typesafe-actions" %}
 
-## redux-ovservable
+## redux-observable
+
+Reduxでの非同期処理ミドルウェア。Actionを受け取り、Actionを返すEpicを作成する。
+
+> [RxJS](http://github.com/ReactiveX/RxJS)-based middleware for [Redux](http://github.com/reactjs/redux). Compose and cancel async actions to create side effects and more.
+
+{% embed url="https://redux-observable.js.org/" %}
 
 
 
