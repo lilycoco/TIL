@@ -1,6 +1,6 @@
 # Reduxとその周辺Libraryの図解
 
-![Redux&#x3068;&#x305D;&#x306E;&#x5468;&#x8FBA;Library&#x306E;&#x56F3;&#x89E3;](../.gitbook/assets/_-coding-note.jpg)
+![](../.gitbook/assets/image.png)
 
 ## react-redux
 
