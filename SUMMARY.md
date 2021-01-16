@@ -9,6 +9,7 @@
 * [Docker](docker/README.md)
   * [S3](docker/s3.md)
 * [Scala](scala/README.md)
+  * [Design patterns](scala/design-patterns.md)
   * [Test](scala/test-1.md)
   * [Basic](scala/basic.md)
   * [Collection Method](scala/collection-method/README.md)
