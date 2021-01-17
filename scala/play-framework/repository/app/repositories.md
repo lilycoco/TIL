@@ -72,6 +72,19 @@ abstract class AbstractRepository(protected val db: Database) extends Repository
 
 {% embed url="https://java-code.jp/969" %}
 
+これまで書いていたexecuteとの違いは実際に実行しているメソッドが`executeQuery`か`executeUpdate`と言う点です。  
+executeQueryは返り値にResultSetと言う型を返すのに対して、executeUpdateはIntを返します。
+
+SELECT文の場合、キーバリューのようなレコードを取得する必要があり、これに使えるのがResultSetです。  
+ResultSetの中にはSQLの実行結果が入っていて`resultSet.getString(カラム名)`で取得できた結果から各値を取り出せます。  
+ちょうど連想配列で`hogeMap['id']`とするのと似た感覚です。
+
+これに対して、登録・更新・削除の場合の実行結果とは何か。  
+つまり、返り値となりうるものは、処理に成功したレコード数です。  
+そのため先ほどのexecuteQueryは使えません。  
+代わりに用意されているのがexecuteUpdate。  
+データベースのテーブルからして見れば、登録・更新・削除、いずれにしてもテーブルの値がupdateされるわけなので。
+
 {% embed url="https://java-code.jp/971" %}
 
 
