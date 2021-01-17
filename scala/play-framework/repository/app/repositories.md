@@ -21,6 +21,10 @@ MySQLからPostgreSQLにします！とか、一元管理していたDBを分割
 
 {% embed url="https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design" %}
 
+{% embed url="https://docs.oracle.com/javase/jp/6/api/java/sql/Statement.html" %}
+
+
+
 ### repositories/Repository.scala
 
 これはいわゆるマーカーインターフェースというもので単なる目印みたいなものですね😛  
