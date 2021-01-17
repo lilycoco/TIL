@@ -53,6 +53,29 @@ class HealthCheckRepositoryImpl extends AbstractRepository with HealthCheckRepos
 
 `abstract class`で定義されている。つまりこいつは実装を持っているわけだ。どんなRepositoryでも使うであろう「SQLを発行して結果を返す」という処理`execute`だね🙌
 
+```scala
+package repositories
+
+import java.sql.ResultSet
+import play.api.db.Database
+import utils.Closable
+
+abstract class AbstractRepository(protected val db: Database) extends Repository with Closable{
+  def execute[A](sql: String)( func: ResultSet => A ): A = using(db.getConnection()) { con =>
+    func(con.createStatement.executeQuery(sql))
+  }
+  def executeUpdate(sql: String)( func: Int => Int ): Int = using(db.getConnection()) { con =>
+    func(con.createStatement.executeUpdate(sql))
+  }
+}
+```
+
+{% embed url="https://java-code.jp/969" %}
+
+{% embed url="https://java-code.jp/971" %}
+
+
+
 ### HealthCheckRepository
 
 振る舞い定義。`HealthCheckRepositoryImpl`で実現をして、DIする
