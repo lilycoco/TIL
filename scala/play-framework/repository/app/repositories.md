@@ -21,10 +21,6 @@ MySQLからPostgreSQLにします！とか、一元管理していたDBを分割
 
 {% embed url="https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design" %}
 
-{% embed url="https://docs.oracle.com/javase/jp/6/api/java/sql/Statement.html" %}
-
-
-
 ### repositories/Repository.scala
 
 これはいわゆるマーカーインターフェースというもので単なる目印みたいなものですね😛  
@@ -56,42 +52,6 @@ class HealthCheckRepositoryImpl extends AbstractRepository with HealthCheckRepos
 ### AbstractRepository
 
 `abstract class`で定義されている。つまりこいつは実装を持っているわけだ。どんなRepositoryでも使うであろう「SQLを発行して結果を返す」という処理`execute`だね🙌
-
-```scala
-package repositories
-
-import java.sql.ResultSet
-import play.api.db.Database
-import utils.Closable
-
-abstract class AbstractRepository(protected val db: Database) extends Repository with Closable{
-  def execute[A](sql: String)( func: ResultSet => A ): A = using(db.getConnection()) { con =>
-    func(con.createStatement.executeQuery(sql))
-  }
-  def executeUpdate(sql: String)( func: Int => Int ): Int = using(db.getConnection()) { con =>
-    func(con.createStatement.executeUpdate(sql))
-  }
-}
-```
-
-{% embed url="https://java-code.jp/969" %}
-
-これまで書いていたexecuteとの違いは実際に実行しているメソッドが`executeQuery`か`executeUpdate`と言う点です。  
-executeQueryは返り値にResultSetと言う型を返すのに対して、executeUpdateはIntを返します。
-
-SELECT文の場合、キーバリューのようなレコードを取得する必要があり、これに使えるのがResultSetです。  
-ResultSetの中にはSQLの実行結果が入っていて`resultSet.getString(カラム名)`で取得できた結果から各値を取り出せます。  
-ちょうど連想配列で`hogeMap['id']`とするのと似た感覚です。
-
-これに対して、登録・更新・削除の場合の実行結果とは何か。  
-つまり、返り値となりうるものは、**処理に成功したレコード数**です。  
-そのため先ほどのexecuteQueryは使えません。  
-代わりに用意されているのがexecuteUpdate。  
-データベースのテーブルからして見れば、登録・更新・削除、いずれにしてもテーブルの値がupdateされるわけなので。
-
-{% embed url="https://java-code.jp/971" %}
-
-
 
 ### HealthCheckRepository
 
