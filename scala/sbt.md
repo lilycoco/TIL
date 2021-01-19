@@ -43,3 +43,11 @@ $ sbt run
 
 データベース設定などを変更した場合は一度サーバーを停止し、`reload`, `run` する
 
+## REPL
+
+```text
+> console
+
+scala>
+```
+

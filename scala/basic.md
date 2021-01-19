@@ -146,9 +146,3 @@ object Main {
 }
 ```
 
-## 文字列の補完
-
-{% embed url="https://docs.scala-lang.org/ja/overviews/core/string-interpolation.html" %}
-
-
-
