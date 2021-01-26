@@ -24,5 +24,7 @@
 
 {% embed url="http://mugi1.hateblo.jp/entry/2018/12/11/215808" %}
 
+{% embed url="https://github.com/kettanaito/naming-cheatsheet" %}
+
 
 
