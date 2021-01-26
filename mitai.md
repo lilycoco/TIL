@@ -6,6 +6,10 @@
 
 {% embed url="https://analogstd.com/pc/javascript-eventhandler-addeventlistener/" %}
 
+ちょっと古いけど、JSテストの全体像が書かれています
+
+{% embed url="https://postd.cc/a-complete-guide-to-testing-javascript-in-2017/" %}
+
 
 
 ## React
