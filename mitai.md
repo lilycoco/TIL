@@ -24,6 +24,8 @@
 
 {% embed url="http://mugi1.hateblo.jp/entry/2018/12/11/215808" %}
 
+技術チェックしていて見つけたいいものがあるので、時間があったらチェックするといいと思います。命名について短くよくまとまっています。特にNaming functionsの部分いいです。
+
 {% embed url="https://github.com/kettanaito/naming-cheatsheet" %}
 
 
