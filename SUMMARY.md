@@ -31,6 +31,7 @@
     * [Test](scala/play-framework/test.md)
 * [Jest](jest/README.md)
   * [React Testing Library](jest/react-testing-library.md)
+* [npm](npm.md)
 * [TypeScript](typescript/README.md)
   * [Advanced](typescript/advanced.md)
   * [ts-node-dev](typescript/ts-node-dev.md)
