@@ -1,5 +1,194 @@
 # Basic
 
+```scala
+class Calc {
+  val sum = (x: Int, y: Int) => x + y
+}
+​
+val c = new Calc
+println(c.sum(1, 2))
+​
+// 関数
+// オブジェクト
+val sum = (x: Int, y: Int) => x + y
+val double = (x: Int) => x * 2
+val half = (x: Int) => x / 2
+​
+// メソッド
+// オブジェクトの所有物 = オブジェクトの振る舞い
+// 人が車使う、挨拶する
+def sum (x: Int, y: Int): Int = x + y
+def methodHalf (x: Int): Int = x / 2
+​
+val addThenX = (x: Int, y: Int) => (func: Int => Int) => func(x + y)
+println(addThenX(1, 2) { r =>
+  r * 2
+})
+​
+val addThenY = (x: Int, y: Int, func: Int => Int) => func(x + y)
+println(addThenY(1, 2, { r =>
+  r * 2
+}))
+​
+// class
+class Dog(name: String)
+val dog1 = new Dog("poti")
+val dog2 = new Dog("poti")
+// インスタンスを比較
+if (dog1 == dog2) println("同じ犬")
+else println("違う犬") // 違う犬
+​
+// case class
+case class CaseDog(name: String)
+val cDog1 = CaseDog("poti")
+val cDog2 = CaseDog("poti")
+// 値を比較
+if (cDog1 == cDog2) println("同じ犬")
+else println("違う犬") // 同じ犬
+​
+case class Coin(num: Int)
+​
+case class Name(value: String)
+class User(name: Name) {
+  def getName: Name = name
+}
+​
+val user1 = new User(Name("遼子"))
+val user2 = new User(Name("遼子"))
+//val user3 = new User("遼子")
+​
+// インスタンスを比較
+if (user1 == user2) println("同じユーザー")
+else println("違うユーザー")
+// 値を比較
+if (user1.getName == user2.getName) println("同じ名前")
+else println("違う名前")
+​
+// object
+// 単一のインスタンスを持つクラス（シングルトン）
+object Counter {
+  private var num = 0
+  def add: Unit = num += 1
+  def getNum(): Int = num
+}
+​
+Counter.add
+println(Counter.getNum())
+Counter.add
+println(Counter.getNum())
+Counter.add
+Counter.add
+println(Counter.getNum())
+​
+class ClassCounter {
+  private var num = 0
+  def add: Unit = num += 1
+  def getNum(): Int = num
+}
+val counter1 = new ClassCounter
+counter1.add
+println(counter1.getNum())
+counter1.add
+println(counter1.getNum())
+​
+val counter2 = new ClassCounter
+println(counter2.getNum())
+​
+// trait
+// 実装とフィールドを持てる型
+// 振る舞いだけを定義して、子クラスに実装を強制する
+trait Engineer {
+  def greet(): Unit = println("こんにちは")
+  def develop(): Unit
+}
+class FrontendEngineer extends Engineer {
+  override def develop(): Unit = println("フロントエンドの開発")
+}
+class BackendEngineer extends Engineer {
+  override def greet(): Unit = println("はろー")
+  override def develop(): Unit = println("バックエンドの開発")
+}
+​
+val members: Seq[Engineer] = Seq(
+  new FrontendEngineer,
+  new FrontendEngineer,
+  new BackendEngineer,
+)
+​
+members.foreach(member => member.develop())
+members.foreach(member => member.greet())
+​
+// abstract
+// traitと同様に抽象メソッド（＝実装がされていないメソッド）を持てる
+// コンストラクタを持てる
+abstract class Developer(name: String) {
+  def greet(): Unit = println("こんにちは")
+  def develop(): Unit
+}
+​
+trait Engineer {
+  def develop(): Unit
+}
+​
+abstract class Person(name: String) {
+  def greet(): Unit = println(s"こんにちは、${name}です")
+}
+​
+class FrontendEngineer(name: String) extends Person(name) with Engineer {
+  override def develop(): Unit = println("フロントエンドを開発します")
+}
+​
+val developer = new FrontendEngineer("遼子")
+developer.greet()
+developer.develop()
+​
+// OOP三原則
+// 継承（is-aの関係を考えること）
+// 多態性（振る舞いの結果が実体によって変わること）
+
+```
+
+## Object指向
+
+```text
+コンポーネント指向とオブジェクト指向
+→部品再利用
+柔軟な拡張と変更
+
+---
+
+オブジェクト＝もの・ことなど
+オブジェクト指向＝オブジェクト同士の対話、でプログラムを設計すること
+人間
+車
+「人間」が「車」を使う
+「車」が「人間」を運ぶ
+
+---
+
+is-a, has-a関係
+
+is-a
+「動物」には「犬」と「猫」がいる
+o「犬」は「動物」である。Dog is an Animal.
+o「猫」は「動物」である。
+x「動物」は「犬」である。Animal is a Dog.
+x「犬」は「猫」である。
+o「CategoryController」は「Controller」である。
+x「Controller」は「CategoryController」である。
+
+has-a
+「車」
+エンジン、タイヤ、ハンドル、窓、etc.
+x「車」は「エンジン」である。
+x「エンジン」は「車」である。
+o「車」は「エンジン」を持っている。Car has a Engine.
+o「車」は「ハンドル」を持っている。Car has a Handle.
+o「CategoryController」は「CategoryRepository」を持っている。
+x「CategoryRepository」は「CategoryController」を持っている。
+
+```
+
 ## 値\(再代入不可\)
 
 ```scala
