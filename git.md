@@ -2,6 +2,12 @@
 
 [よく使う Vim のコマンドまとめ](https://qiita.com/hide/items/5bfe5b322872c61a6896)
 
+### Commit をまとめる
+
+{% embed url="https://qiita.com/takke/items/3400b55becfd72769214" %}
+
+
+
 ### バージョン管理の状態を確認する
 
 `git status`
