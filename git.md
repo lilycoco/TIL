@@ -4,6 +4,10 @@
 
 ### Commit をまとめる
 
+4つまとめる場合
+
+`git rebase -i HEAD~4`
+
 {% embed url="https://qiita.com/takke/items/3400b55becfd72769214" %}
 
 
