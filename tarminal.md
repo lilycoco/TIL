@@ -19,9 +19,5 @@ vim  ~/.bash_profile
 :wq is “save and exit”
 ```
 
-## ローカルサーバーの停止方法
-
-{% embed url="https://qiita.com/kskumgk63/items/949a2a95c08c6c12aa47" %}
-
 
 
