@@ -2,6 +2,29 @@
 
 [よく使う Vim のコマンドまとめ](https://qiita.com/hide/items/5bfe5b322872c61a6896)
 
+### Cherry-pick
+
+```text
+git checkout develop
+git pull origin develop
+git log
+(対象のCommitIDをコピー)
+git checkout staging
+git checkout -b hotfix-XXXX
+git cherry-pick [COMMITID]
+git push origin hotfix-XXXX
+```
+
+### Commit をまとめる
+
+4つまとめる場合
+
+`git rebase -i HEAD~4`
+
+{% embed url="https://qiita.com/takke/items/3400b55becfd72769214" %}
+
+
+
 ### バージョン管理の状態を確認する
 
 `git status`
