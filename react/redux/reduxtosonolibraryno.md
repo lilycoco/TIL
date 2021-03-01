@@ -1,6 +1,6 @@
 # Reduxとその周辺Libraryの図解
 
-![](../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image.png)
 
 ## react-redux
 

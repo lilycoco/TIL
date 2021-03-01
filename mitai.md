@@ -6,6 +6,10 @@
 
 {% embed url="https://analogstd.com/pc/javascript-eventhandler-addeventlistener/" %}
 
+ちょっと古いけど、JSテストの全体像が書かれています
+
+{% embed url="https://postd.cc/a-complete-guide-to-testing-javascript-in-2017/" %}
+
 
 
 ## React
@@ -23,6 +27,10 @@
 {% embed url="https://www.buildinsider.net/web/chromedevtools/01\#page-4" %}
 
 {% embed url="http://mugi1.hateblo.jp/entry/2018/12/11/215808" %}
+
+技術チェックしていて見つけたいいものがあるので、時間があったらチェックするといいと思います。命名について短くよくまとまっています。特にNaming functionsの部分いいです。
+
+{% embed url="https://github.com/kettanaito/naming-cheatsheet" %}
 
 
 
