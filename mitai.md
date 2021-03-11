@@ -22,6 +22,8 @@
 
 ## Other
 
+{% embed url="https://qiita.com/bananaumai/items/3eb77a67102f53e8a1ad" %}
+
 {% embed url="https://note.com/retoruto\_carry/n/n76e823abc0e5" %}
 
 {% embed url="https://www.buildinsider.net/web/chromedevtools/01\#page-4" %}
