@@ -22,6 +22,10 @@
 
 ## Other
 
+{% embed url="http://crazive7.com/startblender/" %}
+
+
+
 {% embed url="https://qiita.com/bananaumai/items/3eb77a67102f53e8a1ad" %}
 
 {% embed url="https://note.com/retoruto\_carry/n/n76e823abc0e5" %}
