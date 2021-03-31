@@ -1,12 +1,8 @@
 # Test
 
-{% embed url="https://docs.google.com/spreadsheets/d/1WATfZcRg-NSu1vtMr1NpTsv96GQ0\_LPjtPLlRLkiLTU/edit\#gid=2119276490" %}
-
 \*\*\*\*
 
 ![](../.gitbook/assets/screen-shot-0003-03-31-at-13.48.24.png)
-
-## 
 
 ## Unit Tests
 
