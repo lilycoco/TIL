@@ -1,7 +1,5 @@
 # Test
 
-\*\*\*\*
-
 ![](../.gitbook/assets/screen-shot-0003-03-31-at-13.48.24.png)
 
 ## Unit Tests
