@@ -2,6 +2,7 @@
 
 * [TIL](README.md)
 * [Books](books.md)
+* [情報設計](qing-bao-she-ji.md)
 * [Blog](blog/README.md)
   * [未経験からエンジニアとして働いてみて1年経った今思うこと](blog/karaenjiniatoshiteitemite1ttaukoto.md)
 * [使ってみたい](ttemitai.md)
