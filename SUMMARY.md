@@ -7,6 +7,7 @@
   * [未経験からエンジニアとして働いてみて1年経った今思うこと](blog/karaenjiniatoshiteitemite1ttaukoto.md)
 * [使ってみたい](ttemitai.md)
 * [読みたい](mitai.md)
+* [Web Design](web-design.md)
 * [Docker](docker/README.md)
   * [S3](docker/s3.md)
 * [Scala](scala/README.md)
