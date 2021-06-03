@@ -1,6 +1,8 @@
 # Table of contents
 
 * [TIL](README.md)
+* [Project Management](project-management/README.md)
+  * [Jira skill](project-management/jira-skill.md)
 * [Books](books.md)
 * [情報設計](qing-bao-she-ji.md)
 * [Blog](blog/README.md)
