@@ -10,5 +10,9 @@
 
 Scenario 1: 
 
+* Given
+* When
+* Then
+
 **Things to clarify** 
 
